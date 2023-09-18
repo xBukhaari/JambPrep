@@ -11,6 +11,7 @@
 		1998B0072AB908310021CC60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0062AB908310021CC60 /* ContentView.swift */; };
 		1998B0092AB908350021CC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998B0082AB908350021CC60 /* Assets.xcassets */; };
 		1998B00C2AB908350021CC60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998B00B2AB908350021CC60 /* Preview Assets.xcassets */; };
+		1998B0132AB908D50021CC60 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0122AB908D40021CC60 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1998B0062AB908310021CC60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1998B0082AB908350021CC60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1998B00B2AB908350021CC60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1998B0122AB908D40021CC60 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				1998B0042AB908310021CC60 /* JambPrepApp.swift */,
 				1998B0062AB908310021CC60 /* ContentView.swift */,
+				1998B0122AB908D40021CC60 /* OnboardingView.swift */,
 				1998B0082AB908350021CC60 /* Assets.xcassets */,
 				1998B00A2AB908350021CC60 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1998B0132AB908D50021CC60 /* OnboardingView.swift in Sources */,
 				1998B0072AB908310021CC60 /* ContentView.swift in Sources */,
 				1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */,
 			);
