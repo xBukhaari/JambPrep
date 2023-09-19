@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19557DAB2AB9EC78008CC6A4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19557DAA2AB9EC78008CC6A4 /* ProfileView.swift */; };
 		1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0042AB908310021CC60 /* JambPrepApp.swift */; };
 		1998B0072AB908310021CC60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0062AB908310021CC60 /* ContentView.swift */; };
 		1998B0092AB908350021CC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998B0082AB908350021CC60 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19557DAA2AB9EC78008CC6A4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1998B0012AB908310021CC60 /* JambPrep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JambPrep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1998B0042AB908310021CC60 /* JambPrepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JambPrepApp.swift; sourceTree = "<group>"; };
 		1998B0062AB908310021CC60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				1998B0042AB908310021CC60 /* JambPrepApp.swift */,
 				1998B0062AB908310021CC60 /* ContentView.swift */,
+				19557DAA2AB9EC78008CC6A4 /* ProfileView.swift */,
 				1998B0122AB908D40021CC60 /* OnboardingView.swift */,
 				1998B0082AB908350021CC60 /* Assets.xcassets */,
 				1998B00A2AB908350021CC60 /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19557DAB2AB9EC78008CC6A4 /* ProfileView.swift in Sources */,
 				1998B0132AB908D50021CC60 /* OnboardingView.swift in Sources */,
 				1998B0072AB908310021CC60 /* ContentView.swift in Sources */,
 				1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */,
