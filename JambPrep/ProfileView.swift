@@ -12,8 +12,10 @@ struct ProfileView: View {
     @State private var name = ""
     @State private var selectedState = "Kaduna" // Default state
     @State private var selectedStateUniversity = "Kaduna State University"
+    
     @State private var course = ""
     @State private var selectedGrade = 300 // Default grade
+    @State private var selectedFederalUniversity = "Ahmadu Bello Univerisity, Zaria"
     
     // List of Nigerian states
     let states = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT - Abuja", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"]
@@ -82,96 +84,64 @@ struct ProfileView: View {
         "Sa’adatu Rimi University of Education"
     ]
     
-    let federalUniversities = [
-        "Abubakar Tafawa Balewa University, Bauchi",
-        "Ahmadu Bello University, Zaria",
-        "Bayero University, Kano",
-        "Federal University Gashua, Yobe",
-        "Federal University of Petroleum Resources, Effurun",
-        "Federal University of Technology, Akure",
-        "Federal University of Technology, Minna",
-        "Federal University of Technology, Owerri",
-        "Federal University, Dutse, Jigawa State",
-        "Federal University, Dutsin-Ma, Katsina",
-        "Federal University, Kashere, Gombe State",
-        "Federal University, Lafia, Nasarawa State",
-        "Federal University, Lokoja, Kogi State",
-        "Alex Ekwueme University, Ndufu-Alike, Ebonyi State",
-        "Federal University, Otuoke, Bayelsa",
-        "Federal University, Oye-Ekiti, Ekiti State",
-        "Federal University, Wukari, Taraba State",
-        "Federal University, Birnin Kebbi",
-        "Federal University, Gusau Zamfara",
-        "Michael Okpara University of Agricultural Umudike",
-        "Modibbo Adama University of Technology, Yola",
-        "National Open University of Nigeria, Lagos",
-        "Nigeria Police Academy Wudil",
-        "Nigerian Defence Academy Kaduna",
-        "Nnamdi Azikiwe University, Awka",
-        "Obafemi Awolowo University,Ile-Ife",
-        "University of Abuja, Gwagwalada",
-        "Federal University of Agriculture, Abeokuta",
-        "University of Agriculture, Makurdi",
-        "University of Benin",
-        "University of Calabar",
-        "University of Ibadan",
-        "University of Ilorin",
-        "University of Jos",
-        "University of Lagos",
-        "University of Maiduguri",
-        "University of Nigeria, Nsukka",
-        "University of Port-Harcourt",
-        "University of Uyo",
-        "Usmanu Danfodiyo University",
-        "Nigerian Maritime University Okerenkoko, Delta State",
-        "Air Force Institute of Technology, Kaduna",
-        "Nigerian Army University Biu",
-        "Federal University of Health Technology, Otukpo Benue State",
-        "Federal University of Agriculture, Zuru, Kebbi State",
-        "Federal University of Technology, Babura, Jigawa State",
-        "Federal University of Technology, Ikot Abasi, Akwa Ibom State",
-        "Federal University of Health Sciences, Azare, Bauchi State",
-        "Federal University of Health Sciences, Ila Orangun, Osun State",
-        "King David Umahi University of Medical Sciences, Uburu, Ebonyi State"
-    ]
-
     
-
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("Personal Information")) {
-                    TextField("Name", text: $name)
-                }
+            VStack {
                 
-                Section(header: Text("Location")) {
-                    Picker("State", selection: $selectedState) {
-                        ForEach(states, id: \.self) { state in
-                            Text(state).tag(state)
+                Image("jambLogo")
+                    .resizable()
+                    .frame(width: 90, height: 90)
+                Form {
+                    Section(header: Text("Username").bold()) {
+                        TextField("Name", text: $name)
+                    }
+                    
+                    Section(header: Text("Location").bold()) {
+                        Picker("State", selection: $selectedState) {
+                            ForEach(states, id: \.self) { state in
+                                Text(state).tag(state)
+                            }
                         }
                     }
-                }
-                
-                Section(header: Text("Choice of State university")) {
-                    Picker("University", selection: $selectedStateUniversity) {
-                        ForEach(stateUniversities, id: \.self) { state in
-                            Text(state).tag(state)
+                    
+                    
+                    Section(header: Text("Choice of State university").bold()) {
+                        Picker("University", selection: $selectedStateUniversity) {
+                            ForEach(stateUniversities, id: \.self) { state in
+                                Text(state).tag(state)
+                            }
                         }
                     }
-                }
-                
-                Section(header: Text("Desired Course")) {
-                    TextField("Course", text: $course)
-                }
-                
-                Section(header: Text("Desired Grade")) {
-                    Stepper(value: $selectedGrade, in: 180...400, step: 1) {
-                        Text("\(selectedGrade)")
+                    
+                    Section(header: Text("Desired Course").bold()) {
+                        TextField("Course", text: $course)
+                    }
+                    
+                    Section(header: Text("Desired Grade").bold()) {
+                        Stepper(value: $selectedGrade, in: 180...400, step: 1) {
+                            Text("\(selectedGrade)")
+                            
+                            
+                            
+                        }
+                    }
+                    Button(action: {
+                        // Handle saving the user's information here
+                        // You can access the values in the @State properties (name, selectedState, selectedStateUniversity, course, selectedGrade)
+                    }) {
+                        Text("Save")
+                            .font(.headline)
+                            .frame(maxWidth: 950, maxHeight: 33)
+                            .foregroundColor(.green)
+                        
                     }
                 }
+                
             }
-            .navigationTitle("Profile")
+            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+
         }
     }
 }
