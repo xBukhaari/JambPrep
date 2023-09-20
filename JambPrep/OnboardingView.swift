@@ -39,7 +39,7 @@ struct OnboardingView: View {
                     Text("Welcome to \(appName)")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .padding(.vertical, 50)
+                        .padding(.vertical, 40)
                         .multilineTextAlignment(.center)
                     Spacer()
                     VStack {
@@ -107,13 +107,16 @@ struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView(appName: "JambPrep",
                        features: [
-                        Feature(title: "Access To Past Question", description: "Over 100,000 past questions of the 25 JAMB subjects from 1990-2022 are available for you to practice.", icon: "book.fill"),
-                        Feature(title: "Customize Your Subjects", description: "You can choose any combination of four subjects that align with your JAMB goals.", icon: "pencil"),
-                        Feature(title: "Comprehensive Result", description: "Receive detailed performance feedback upon completing selected practice tests.", icon: "chart.bar.xaxis"),
-                       
-                        Feature(title: "Challenge Other Students", description: "Keep a streak, challenge and meet other students like you.", icon: "flame.fill"),
+                        Feature(title: "Access To Past Question", description: "Over 100,000 past questions are available for you to practice.", icon: "book.fill"),
                         
-                        Feature(title: "Ad-Free Experience", description: "Thank you for downloading my app, practice and get that 300+ score champ!", icon: "party.popper.fill"),
+                        Feature(title: "Study Material", description: "Curriculum, notes and textbooks are available to help you.", icon: "books.vertical.fill"),
+                        
+                        Feature(title: "Customize Your Subjects", description: "Choose any combination of four subjects to practice at a time.", icon: "pencil"),
+                        
+                        Feature(title: "Comprehensive Result", description: "Receive performance feedback upon completing tests.", icon: "graduationcap.fill"),
+
+                        
+                        Feature(title: "Ad-Free Experience", description: "No ads, no payment needed!", icon: "party.popper.fill"),
                        
                        ],
                        color: Color.green)

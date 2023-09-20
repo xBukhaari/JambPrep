@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     // Define the properties to store user inputs
+    
     @State private var name = ""
     @State private var selectedState = "Kaduna" // Default state
     @State private var selectedStateUniversity = "Kaduna State University"
@@ -16,6 +17,7 @@ struct ProfileView: View {
     @State private var course = ""
     @State private var selectedGrade = 300 // Default grade
     @State private var selectedFederalUniversity = "Ahmadu Bello Univerisity, Zaria"
+    
     
     // List of Nigerian states
     let states = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT - Abuja", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"]
@@ -83,6 +85,13 @@ struct ProfileView: View {
         "Emmanuel Alayande University of Education",
         "Sa’adatu Rimi University of Education"
     ]
+    struct UserData {
+        var name: String
+        var selectedState: String
+        var selectedStateUniversity: String
+        var course: String
+        var selectedGrade: Int
+    }
     
     
     
@@ -119,30 +128,32 @@ struct ProfileView: View {
                         TextField("Course", text: $course)
                     }
                     
-                    Section(header: Text("Desired Grade").bold()) {
+                    Section(header: Text("Grade Goal").bold()) {
                         Stepper(value: $selectedGrade, in: 180...400, step: 1) {
                             Text("\(selectedGrade)")
                             
-                            
-                            
                         }
                     }
-                    Button(action: {
-                        // Handle saving the user's information here
-                        // You can access the values in the @State properties (name, selectedState, selectedStateUniversity, course, selectedGrade)
-                    }) {
-                        Text("Save")
-                            .font(.headline)
-                            .frame(maxWidth: 950, maxHeight: 33)
-                            .foregroundColor(.green)
-                        
-                    }
                 }
-                
+                Button(action: {
+                    // Handle saving the user's information here
+                    
+
+                }) {
+                    Text("Save")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity, maxHeight: 50)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                        .padding(50)
+                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                }
             }
             .background(Color(red: 0.95, green: 0.95, blue: 0.95))
-
+            
         }
+        
     }
 }
 
