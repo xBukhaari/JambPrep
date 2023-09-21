@@ -1,25 +1,19 @@
 //
-//  ProfileView.swift
+//  UserInfoView.swift
 //  JambPrep
 //
-//  Created by Bukhari Sani on 19/09/2023.
+//  Created by Bukhari Sani on 20/09/2023.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
-    // Define the properties to store user inputs
-    
+struct UserInfoView: View {
     @State private var name = ""
     @State private var selectedState = "Kaduna" // Default state
     @State private var selectedStateUniversity = "Kaduna State University"
-    
     @State private var course = ""
     @State private var selectedGrade = 300 // Default grade
-    @State private var selectedFederalUniversity = "Ahmadu Bello Univerisity, Zaria"
     
-    
-    // List of Nigerian states
     let states = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT - Abuja", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"]
     
     let stateUniversities = [
@@ -83,82 +77,73 @@ struct ProfileView: View {
         "Enugu State University of Medical and Applied Sciences",
         "University of Ilesa",
         "Emmanuel Alayande University of Education",
-        "Sa’adatu Rimi University of Education"
-    ]
-    struct UserData {
-        var name: String
-        var selectedState: String
-        var selectedStateUniversity: String
-        var course: String
-        var selectedGrade: Int
-    }
-    
+        "Sa'adatu Rimi University of Education"]
     
     
     var body: some View {
-        NavigationView {
-            VStack {
-                
-                Image("jambLogo")
-                    .resizable()
-                    .frame(width: 90, height: 90)
-                Form {
-                    Section(header: Text("Username").bold()) {
-                        TextField("Name", text: $name)
-                    }
+            NavigationView {
+                VStack {
                     
-                    Section(header: Text("Location").bold()) {
-                        Picker("State", selection: $selectedState) {
-                            ForEach(states, id: \.self) { state in
-                                Text(state).tag(state)
+                    Image("jambLogo")
+                        .resizable()
+                        .frame(width: 90, height: 90)
+                    
+                    Form {
+                        Section(header: Text("Username").bold()) {
+                            TextField("Name", text: $name)
+                        }
+                        
+                        Section(header: Text("Location").bold()) {
+                            Picker("State", selection: $selectedState) {
+                                ForEach(states, id: \.self) { state in
+                                    Text(state).tag(state)
+                                }
+                            }
+                        }
+                        
+                        
+                        Section(header: Text("Choice of State university").bold()) {
+                            Picker("University", selection: $selectedStateUniversity) {
+                                ForEach(stateUniversities, id: \.self) { state in
+                                    Text(state).tag(state)
+                                }
+                            }
+                        }
+                        
+                        Section(header: Text("Desired Course").bold()) {
+                            TextField("Course", text: $course)
+                        }
+                        
+                        Section(header: Text("Grade Goal").bold()) {
+                            Stepper(value: $selectedGrade, in: 180...400, step: 1) {
+                                Text("\(selectedGrade)")
+                                
                             }
                         }
                     }
-                    
-                    
-                    Section(header: Text("Choice of State university").bold()) {
-                        Picker("University", selection: $selectedStateUniversity) {
-                            ForEach(stateUniversities, id: \.self) { state in
-                                Text(state).tag(state)
-                            }
-                        }
-                    }
-                    
-                    Section(header: Text("Desired Course").bold()) {
-                        TextField("Course", text: $course)
-                    }
-                    
-                    Section(header: Text("Grade Goal").bold()) {
-                        Stepper(value: $selectedGrade, in: 180...400, step: 1) {
-                            Text("\(selectedGrade)")
-                            
-                        }
-                    }
-                }
-                Button(action: {
-                    // Handle saving the user's information here
-                    
+                    Button(action: {
+                        // Handle saving the user's information here
+                        
 
-                }) {
-                    Text("Save")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, maxHeight: 50)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
-                        .padding(50)
-                        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                    }) {
+                        Text("Save")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                            .padding(50)
+                            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                    }
                 }
+                .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                
             }
-            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
             
         }
-        
     }
-}
-
-struct ProfileView_Previews: PreviewProvider {
+struct UserInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        UserInfoView()
     }
 }
