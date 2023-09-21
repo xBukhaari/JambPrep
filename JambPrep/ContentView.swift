@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var userDataViewModel = UserDataViewModel()
+    @State private var selectedTabIndex = 0
+    @State private var showOnboarding = true
+    
     var body: some View {
         VStack {
-            Text("Welcome Omnivrr")
-                .font(.system(.largeTitle, weight: .bold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .clipped()
-                .padding(.leading)
-                .padding(.bottom, 8)
+            Text("Welcome \(userDataViewModel.name)")
+                            .font(.system(.largeTitle, weight: .bold))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .clipped()
+                            .padding(.leading)
+                            .padding(.bottom, 8)
             
-            TabView {
+            
+            TabView (selection: $selectedTabIndex) {
                 // Profile Tab
                 Text("Profile Content")
                     .tabItem {
                         Image(systemName: "person.circle")
                         Text("Profile")
                     }
+                    .tag(0)
                 
                 // Subject Selection Tab
                 Text("Subject Selection Content")
@@ -40,10 +46,10 @@ struct ContentView: View {
                     }
                 
                 // Streak Maintenance Tab
-                Text("Streak Maintenance Content")
+                Text("Statistics")
                     .tabItem {
-                        Image(systemName: "flame")
-                        Text("Streak")
+                        Image(systemName: "chart.line.uptrend.xyaxis")
+                        Text("Stats")
                     }
                 
                 Text("Feedback and Help Content")

@@ -16,6 +16,7 @@ struct Feature: Identifiable {
 }
 
 struct OnboardingView: View {
+    var onContinue: () -> Void
     @State var appName: String
     @State private var closingOnboarding = false
     @State private var showingOnboarding = false
@@ -78,7 +79,7 @@ struct OnboardingView: View {
                         .padding(.bottom, 30)
                         Spacer()
                         
-                        NavigationLink(destination: UserInfoView()) {
+                        NavigationLink(destination: UserInfoView(userDataViewModel: UserDataViewModel(), selectedTabIndex: .constant(0))) {
                                             Text("Continue")
                                                 .fontWeight(.bold)
                                                 .foregroundColor(.white)
@@ -101,22 +102,21 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(appName: "JambPrep",
+        OnboardingView(onContinue: {}, // Pass an empty closure here
+                       appName: "JambPrep",
                        features: [
                         Feature(title: "Access To Past Questions", description: "Over 100,000 past questions are available for you to practice.", icon: "questionmark.folder.fill"),
                         
                         Feature(title: "Study Material", description: "Curriculum, notes and textbooks are available to help you.", icon: "books.vertical.fill"),
                         
-                        Feature(title: "Customize Your Subjects", description: "Choose any combination of four subjects to practice at a time.", icon: "pencil"),
+                        Feature(title: "Customize Your Exams", description: "Choose any combination of four subjects to practice at a time.", icon: "pencil"),
                         
-                        Feature(title: "Comprehensive Result", description: "Receive performance feedback upon completing tests.", icon: "graduationcap.fill"),
+                        Feature(title: "Comprehensive Result", description: "Receive performance feedback upon exams completion.", icon: "graduationcap.fill"),
                         
                         
-                        Feature(title: "Ad-Free Experience", description: "No ads, no payment needed!", icon: "party.popper.fill"),
+                        Feature(title: "Statistics", description: "Stats of all previous exams taken to help you achieve your goals", icon: "chart.line.uptrend.xyaxis"),
                         
                        ],
                        color: Color.green)
     }
 }
-
-    
