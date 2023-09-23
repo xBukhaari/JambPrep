@@ -5,7 +5,7 @@
 //  Created by Bukhari Sani on 20/09/2023.
 //
 
- 
+
 import SwiftUI
 
 struct Feature: Identifiable {
@@ -19,12 +19,11 @@ struct OnboardingView: View {
     var onContinue: () -> Void
     @State var appName: String
     @State private var closingOnboarding = false
-    @State private var showingOnboarding = false
-    
     
     let features: [Feature]
     let color: Color?
     
+    @State private var showingOnboarding = false // Declare it here
     
     var body: some View {
         NavigationView {
@@ -33,7 +32,7 @@ struct OnboardingView: View {
                 .onAppear() {
                     let defaults = UserDefaults.standard
                     let seen = defaults.bool(forKey: "OnboardingSeen")
-                    if(!seen) {
+                    if !seen {
                         //if the onboarding has not been seen
                         showingOnboarding = true
                     }
@@ -59,7 +58,6 @@ struct OnboardingView: View {
                                                 .foregroundColor(color ?? Color.green)
                                                 .padding(.trailing, 15)
                                                 .padding(.vertical, 15)
-                                            
                                         }
                                         VStack(alignment: .leading) {
                                             Text(feature.title)
@@ -67,7 +65,6 @@ struct OnboardingView: View {
                                                 .font(.system(size: 16))
                                             Text(feature.description)
                                                 .font(.system(size: 15))
-                                            
                                         }
                                         Spacer()
                                     }
@@ -80,43 +77,68 @@ struct OnboardingView: View {
                         Spacer()
                         
                         NavigationLink(destination: UserInfoView(userDataViewModel: UserDataViewModel(), selectedTabIndex: .constant(0))) {
-                                            Text("Continue")
-                                                .fontWeight(.bold)
-                                                .foregroundColor(.white)
-                                                .frame(width: 200, height: 65)
-                                                .background(color ?? Color.green)
-                                                .cornerRadius(12)
-                                        }
-                                        .onDisappear() {
-                                            UserDefaults.standard.set(true, forKey: "OnboardingSeen")
-                                            closingOnboarding = true
-                                        }
-                                        .padding(.top, 15)
-                                        .padding(.bottom, 50)
-                                    }
-                                    .padding()
-                                }
+                        }
+                            Button(action: {
+                                UserDefaults.standard.set(true, forKey: "OnboardingSeen")
+                                onContinue() // Call the onContinue closure to navigate to UserInfoView
+                            }) {
+                                Text("Continue")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 200, height: 65)
+                                    .background(color ?? Color.green)
+                                    .cornerRadius(12)
                             }
+                        .onDisappear() {
+                            UserDefaults.standard.set(true, forKey: "OnboardingSeen")
+                            onContinue() // Call the onContinue closure to navigate to UserInfoView
+                        }
+                        .padding(.top, 15)
+                        .padding(.bottom, 50)
+                    }
+                    .padding()
+                }
+        }
     }
 }
 
+
 struct OnboardingView_Previews: PreviewProvider {
+    @State static var showingOnboarding = false
     static var previews: some View {
-        OnboardingView(onContinue: {}, // Pass an empty closure here
-                       appName: "JambPrep",
-                       features: [
-                        Feature(title: "Access To Past Questions", description: "Over 100,000 past questions are available for you to practice.", icon: "questionmark.folder.fill"),
-                        
-                        Feature(title: "Study Material", description: "Curriculum, notes and textbooks are available to help you.", icon: "books.vertical.fill"),
-                        
-                        Feature(title: "Customize Your Exams", description: "Choose any combination of four subjects to practice at a time.", icon: "pencil"),
-                        
-                        Feature(title: "Comprehensive Result", description: "Receive performance feedback upon exams completion.", icon: "graduationcap.fill"),
-                        
-                        
-                        Feature(title: "Statistics", description: "Stats of all previous exams taken to help you achieve your goals", icon: "chart.line.uptrend.xyaxis"),
-                        
-                       ],
-                       color: Color.green)
+        OnboardingView(
+            onContinue: {}, // Empty closure
+            appName: "JambPrep",
+            features: [
+
+                Feature(
+                    title: "Access To Past Questions",
+                    description: "Over 100,000 past questions are available for you to practice.",
+                    icon: "questionmark.folder.fill"),
+                
+                Feature(
+                    title: "Study Material",
+                    description: "Curriculum, notes and textbooks are available to help you.",
+                    icon: "books.vertical.fill"),
+                
+                Feature(
+                    title: "Customize Your Exams",
+                    description: "Choose any combination of four subjects to practice at a time.",
+                    icon: "pencil"),
+                
+                Feature(
+                    title: "Comprehensive Result",
+                    description: "Receive performance feedback upon exams completion.",
+                    icon: "graduationcap.fill"),
+                
+                
+                Feature(
+                    title: "Statistics",
+                    description: "Stats of all previous exams taken to help you achieve your goals",
+                    icon: "chart.line.uptrend.xyaxis"),
+                
+            ],
+            color: Color.green)
     }
 }
+

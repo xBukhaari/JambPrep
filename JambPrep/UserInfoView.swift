@@ -11,7 +11,7 @@ struct UserInfoView: View {
     
     @ObservedObject var userDataViewModel = UserDataViewModel()
     @Binding var selectedTabIndex: Int
-
+    
     
     @State private var name = ""
     @State private var selectedState = "Kaduna" // Default state
@@ -23,56 +23,56 @@ struct UserInfoView: View {
     let states = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT - Abuja", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"]
     
     let federalUniversities =  [
-                               "Abubakar Tafawa Balewa University, Bauchi",
-                                "Ahmadu Bello University, Zaria",
-                                "Bayero University, Kano",
-                                "Federal University Gashua, Yobe",
-                               "Federal University of Petroleum Resources, Effurun",
-                                "Federal University of Technology, Akure",
-                                "Federal University of Technology, Minna",
-                                "Federal University of Technology, Owerri",
-                                "Federal University, Dutse, Jigawa State",
-                                "Federal University, Dutsin-Ma, Katsina",
-                                "Federal University, Kashere, Gombe State",
-                                "Federal University, Lafia, Nasarawa State",
-                                "Federal University, Lokoja, Kogi State",
-                                "Alex Ekwueme University, Ndufu-Alike, Ebonyi State",
-                                "Federal University, Otuoke, Bayelsa",
-                                "Federal University, Oye-Ekiti, Ekiti State",
-                                "Federal University, Wukari, Taraba State",
-                                "Federal University, Birnin Kebbi",
-                                "Federal University, Gusau Zamfara",
-                                "Michael Okpara University of Agricultural Umudike",
-                                "Modibbo Adama University of Technology, Yola",
-                                "National Open University of Nigeria, Lagos",
-                                "Nigeria Police Academy Wudil",
-                                "Nigerian Defence Academy Kaduna",
-                                "Nnamdi Azikiwe University, Awka",
-                                "Obafemi Awolowo University,Ile-Ife",
-                                "University of Abuja, Gwagwalada",
-                                "Federal University of Agriculture, Abeokuta",
-                                "University of Agriculture, Makurdi",
-                                "University of Benin",
-                                "University of Calabar",
-                                "University of Ibadan",
-                                "University of Ilorin",
-                                "University of Jos",
-                                "University of Lagos",
-                                "University of Maiduguri",
-                                "University of Nigeria, Nsukka",
-                                "University of Port-Harcourt",
-                                "University of Uyo",
-                                "Usumanu Danfodiyo University",
-                                "Nigerian Maritime University Okerenkoko, Delta State",
-                                "Air Force Institute of Technology, Kaduna",
-                                "Nigerian Army University Biu",
-                                "Federal University of Health Technology, Otukpo Benue State",
-                                "Federal University of Agriculture, Zuru, Kebbi State",
-                                "Federal University of Technology, Babura, Jigawa State",
-                                "Federal University of Technology, Ikot Abasi, Akwa Ibom State",
-                                "Federal University of Health Sciences, Azare, Bauchi State",
-                                "Federal University of Health Sciences, Ila Orangun, Osun State",
-                                "King David Umahi University of Medical Sciences, Uburu, Ebonyi State"]
+        "Abubakar Tafawa Balewa University, Bauchi",
+        "Ahmadu Bello University, Zaria",
+        "Bayero University, Kano",
+        "Federal University Gashua, Yobe",
+        "Federal University of Petroleum Resources, Effurun",
+        "Federal University of Technology, Akure",
+        "Federal University of Technology, Minna",
+        "Federal University of Technology, Owerri",
+        "Federal University, Dutse, Jigawa State",
+        "Federal University, Dutsin-Ma, Katsina",
+        "Federal University, Kashere, Gombe State",
+        "Federal University, Lafia, Nasarawa State",
+        "Federal University, Lokoja, Kogi State",
+        "Alex Ekwueme University, Ndufu-Alike, Ebonyi State",
+        "Federal University, Otuoke, Bayelsa",
+        "Federal University, Oye-Ekiti, Ekiti State",
+        "Federal University, Wukari, Taraba State",
+        "Federal University, Birnin Kebbi",
+        "Federal University, Gusau Zamfara",
+        "Michael Okpara University of Agricultural Umudike",
+        "Modibbo Adama University of Technology, Yola",
+        "National Open University of Nigeria, Lagos",
+        "Nigeria Police Academy Wudil",
+        "Nigerian Defence Academy Kaduna",
+        "Nnamdi Azikiwe University, Awka",
+        "Obafemi Awolowo University,Ile-Ife",
+        "University of Abuja, Gwagwalada",
+        "Federal University of Agriculture, Abeokuta",
+        "University of Agriculture, Makurdi",
+        "University of Benin",
+        "University of Calabar",
+        "University of Ibadan",
+        "University of Ilorin",
+        "University of Jos",
+        "University of Lagos",
+        "University of Maiduguri",
+        "University of Nigeria, Nsukka",
+        "University of Port-Harcourt",
+        "University of Uyo",
+        "Usumanu Danfodiyo University",
+        "Nigerian Maritime University Okerenkoko, Delta State",
+        "Air Force Institute of Technology, Kaduna",
+        "Nigerian Army University Biu",
+        "Federal University of Health Technology, Otukpo Benue State",
+        "Federal University of Agriculture, Zuru, Kebbi State",
+        "Federal University of Technology, Babura, Jigawa State",
+        "Federal University of Technology, Ikot Abasi, Akwa Ibom State",
+        "Federal University of Health Sciences, Azare, Bauchi State",
+        "Federal University of Health Sciences, Ila Orangun, Osun State",
+        "King David Umahi University of Medical Sciences, Uburu, Ebonyi State"]
     
     let stateUniversities = [
         "Abia State University",
@@ -139,82 +139,82 @@ struct UserInfoView: View {
     
     
     var body: some View {
-            NavigationView {
-                VStack {
-                    
-                    Image("jambLogo")
-                        .resizable()
-                        .frame(width: 65, height: 65)
-                    
-                    Form {
-                        Section(header: Text("Username").bold()) {
-                            TextField("Name", text: $name)
-                        }
+        VStack {
+                NavigationView {
+                    VStack {
+                        Image("jambLogo")
+                            .resizable()
+                            .frame(width: 65, height: 65)
                         
-                        Section(header: Text("Desired Course").bold()) {
-                            TextField("Course", text: $course)
-                        }
-                        
-                        Section(header: Text("Location").bold()) {
-                            Picker("State", selection: $selectedState) {
-                                ForEach(states, id: \.self) { state in
-                                    Text(state).tag(state)
+                        Form {
+                            Section(header: Text("Username").bold()) {
+                                TextField("Name", text: $name)
+                            }
+                            
+                            Section(header: Text("Desired Course").bold()) {
+                                TextField("Course", text: $course)
+                            }
+                            
+                            Section(header: Text("Location").bold()) {
+                                Picker("State", selection: $selectedState) {
+                                    ForEach(states, id: \.self) { state in
+                                        Text(state).tag(state)
+                                    }
+                                }
+                            }
+                            
+                            
+                            Section(header: Text("Choice of Federal University").bold()) {
+                                Picker("Federal", selection: $selectedFederalUniversity) {
+                                    ForEach(federalUniversities, id: \.self) { state in
+                                        Text(state).tag(state)
+                                    }
+                                }
+                            }
+                            Section(header: Text("Choice of State University").bold()) {
+                                Picker("State", selection: $selectedStateUniversity) {
+                                    ForEach(stateUniversities, id: \.self) { state in
+                                        Text(state).tag(state)
+                                    }
+                                }
+                            }
+                            
+                            Section(header: Text("Grade Goal").bold()) {
+                                Stepper(value: $selectedGrade, in: 180...400, step: 1) {
+                                    Text("\(selectedGrade)")
+                                    
                                 }
                             }
                         }
-                        
-                        
-                        Section(header: Text("Choice of University").bold()) {
-                            Picker("Federal", selection: $selectedFederalUniversity) {
-                                ForEach(federalUniversities, id: \.self) { state in
-                                    Text(state).tag(state)
-                                }
-                            }
-                            Picker("State", selection: $selectedStateUniversity) {
-                                ForEach(stateUniversities, id: \.self) { state in
-                                    Text(state).tag(state)
-                                }
-                            }
+                        Button(action: {
+                            selectedTabIndex = 0
+                            userDataViewModel.name = name
+                            userDataViewModel.course = course
+                            userDataViewModel.selectedState = selectedState
+                            userDataViewModel.selectedGrade = selectedGrade
+                            userDataViewModel.selectedFederalUniversity = selectedFederalUniversity
+                            userDataViewModel.selectedStateUniversity = selectedStateUniversity
+                            
+                            // Handle saving the user's information here
+                            
+                        }) {
+                            Text("Save")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity, maxHeight: 60)
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                                .padding(55)
+                            
                         }
                         
-                        Section(header: Text("Grade Goal").bold()) {
-                            Stepper(value: $selectedGrade, in: 180...400, step: 1) {
-                                Text("\(selectedGrade)")
-                                
-                            }
-                        }
                     }
                     
-                    Button(action: {
-                        selectedTabIndex = 0
-                        userDataViewModel.name = name
-                        userDataViewModel.course = course
-                        userDataViewModel.selectedState = selectedState
-                        userDataViewModel.selectedGrade = selectedGrade
-                        userDataViewModel.selectedFederalUniversity = selectedFederalUniversity
-                        userDataViewModel.selectedStateUniversity = selectedStateUniversity
-
-                        // Handle saving the user's information here
-                        
-                    }) {
-                        Text("Save")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                            .padding(50)
-                            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
-                    }
-
                 }
-                .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                 
             }
-            
         }
     }
-
 struct UserInfoView_Previews: PreviewProvider {
     static var previews: some View {
         UserInfoView(userDataViewModel: UserDataViewModel(), selectedTabIndex: .constant(0))
