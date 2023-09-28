@@ -12,6 +12,8 @@ struct UserInfoView: View {
     @ObservedObject var userDataViewModel = UserDataViewModel()
     @Binding var selectedTabIndex: Int
     
+    @State private var shouldNavigateToProfile = false
+    
     
     @State private var name = ""
     @State private var selectedState = "Kaduna" // Default state
@@ -140,81 +142,80 @@ struct UserInfoView: View {
     
     var body: some View {
         VStack {
-                NavigationView {
-                    VStack {
-                        Image("jambLogo")
-                            .resizable()
-                            .frame(width: 65, height: 65)
+            NavigationView {
+                VStack {
+                    Image("jambLogo")
+                        .resizable()
+                        .frame(width: 69, height: 69)
+                    
+                    Form {
+                        Section(header: Text("Username").bold()) {
+                            TextField("Name", text: $name)
+                        }
                         
-                        Form {
-                            Section(header: Text("Username").bold()) {
-                                TextField("Name", text: $name)
-                            }
-                            
-                            Section(header: Text("Desired Course").bold()) {
-                                TextField("Course", text: $course)
-                            }
-                            
-                            Section(header: Text("Location").bold()) {
-                                Picker("State", selection: $selectedState) {
-                                    ForEach(states, id: \.self) { state in
-                                        Text(state).tag(state)
-                                    }
-                                }
-                            }
-                            
-                            
-                            Section(header: Text("Choice of Federal University").bold()) {
-                                Picker("Federal", selection: $selectedFederalUniversity) {
-                                    ForEach(federalUniversities, id: \.self) { state in
-                                        Text(state).tag(state)
-                                    }
-                                }
-                            }
-                            Section(header: Text("Choice of State University").bold()) {
-                                Picker("State", selection: $selectedStateUniversity) {
-                                    ForEach(stateUniversities, id: \.self) { state in
-                                        Text(state).tag(state)
-                                    }
-                                }
-                            }
-                            
-                            Section(header: Text("Grade Goal").bold()) {
-                                Stepper(value: $selectedGrade, in: 180...400, step: 1) {
-                                    Text("\(selectedGrade)")
-                                    
+                        Section(header: Text("Desired Course").bold()) {
+                            TextField("Course", text: $course)
+                        }
+                        
+                        Section(header: Text("Location").bold()) {
+                            Picker("State", selection: $selectedState) {
+                                ForEach(states, id: \.self) { state in
+                                    Text(state).tag(state)
                                 }
                             }
                         }
-                        Button(action: {
-                            selectedTabIndex = 0
-                            userDataViewModel.name = name
-                            userDataViewModel.course = course
-                            userDataViewModel.selectedState = selectedState
-                            userDataViewModel.selectedGrade = selectedGrade
-                            userDataViewModel.selectedFederalUniversity = selectedFederalUniversity
-                            userDataViewModel.selectedStateUniversity = selectedStateUniversity
-                            
-                            // Handle saving the user's information here
-                            
-                        }) {
-                            Text("Save")
-                                .font(.headline)
-                                .frame(maxWidth: .infinity, maxHeight: 60)
-                                .background(Color.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(12)
-                                .padding(55)
-                            
+                        
+                        
+                        Section(header: Text("Choice of Federal University").bold()) {
+                            Picker("Federal", selection: $selectedFederalUniversity) {
+                                ForEach(federalUniversities, id: \.self) { state in
+                                    Text(state).tag(state)
+                                }
+                            }
+                        }
+                        Section(header: Text("Choice of State University").bold()) {
+                            Picker("State", selection: $selectedStateUniversity) {
+                                ForEach(stateUniversities, id: \.self) { state in
+                                    Text(state).tag(state)
+                                }
+                            }
                         }
                         
+                        Section(header: Text("Grade Goal").bold()) {
+                            Stepper(value: $selectedGrade, in: 180...400, step: 1) {
+                                Text("\(selectedGrade)")
+                                
+                            }
+                        }
                     }
                     
+                    Button(action: {
+                        userDataViewModel.name = name
+                        userDataViewModel.course = course
+                        userDataViewModel.selectedState = selectedState
+                        userDataViewModel.selectedGrade = selectedGrade
+                        userDataViewModel.selectedFederalUniversity = selectedFederalUniversity
+                        userDataViewModel.selectedStateUniversity = selectedStateUniversity
+                        
+                        selectedTabIndex = 0
+                        shouldNavigateToProfile.toggle()
+                        
+                        // Handle saving the user's information here
+                        
+                    }) {
+                        Text("Save")
+                            .font(.headline)
+                            .frame(maxWidth: 350, maxHeight: 60)
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                            .padding(15)
+                    }
                 }
-                
             }
         }
     }
+}
 struct UserInfoView_Previews: PreviewProvider {
     static var previews: some View {
         UserInfoView(userDataViewModel: UserDataViewModel(), selectedTabIndex: .constant(0))

@@ -11,6 +11,7 @@ struct ContentView: View {
     @ObservedObject var userDataViewModel = UserDataViewModel()
     @State private var selectedTabIndex = 0
     @State private var showOnboarding = true
+    @State private var shouldNavigateToProfile = false
     
     var body: some View {
         VStack {
@@ -30,6 +31,11 @@ struct ContentView: View {
                         Text("Profile")
                     }
                     .tag(0)
+                    .background(
+                          NavigationLink("", destination: ProfileView(), isActive: $shouldNavigateToProfile)
+                                      .opacity(0)
+                                      .buttonStyle(PlainButtonStyle())
+                              )
                 
                 // Subject Selection Tab
                 Text("Subject Selection Content")
