@@ -31,12 +31,7 @@ struct ContentView: View {
                         Text("Profile")
                     }
                     .tag(0)
-                    .background(
-                          NavigationLink("", destination: ProfileView(), isActive: $shouldNavigateToProfile)
-                                      .opacity(0)
-                                      .buttonStyle(PlainButtonStyle())
-                              )
-                
+                    
                 // Subject Selection Tab
                 Text("Subject Selection Content")
                     .tabItem {
@@ -51,11 +46,17 @@ struct ContentView: View {
                         Text("Study Resources")
                     }
                 
-                // Streak Maintenance Tab
-                Text("Statistics")
+   
+                Text("Leaders")
                     .tabItem {
                         Image(systemName: "chart.line.uptrend.xyaxis")
-                        Text("Stats")
+                        Text("Leaders")
+                    }
+                
+                Text("News")
+                    .tabItem {
+                        Image(systemName: "newspaper.fill")
+                        Text("News")
                     }
                 
                 Text("Feedback and Help Content")

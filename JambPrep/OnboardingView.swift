@@ -82,7 +82,7 @@ struct OnboardingView: View {
                                 UserDefaults.standard.set(true, forKey: "OnboardingSeen")
                                 onContinue() // Call the onContinue closure to navigate to UserInfoView
                             }) {
-                                Text("Continue")
+                                Text("Get Started")
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
                                     .frame(width: 200, height: 65)

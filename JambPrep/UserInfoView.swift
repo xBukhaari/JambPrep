@@ -197,11 +197,7 @@ struct UserInfoView: View {
                         userDataViewModel.selectedFederalUniversity = selectedFederalUniversity
                         userDataViewModel.selectedStateUniversity = selectedStateUniversity
                         
-                        selectedTabIndex = 0
-                        shouldNavigateToProfile.toggle()
-                        
-                        // Handle saving the user's information here
-                        
+                        selectedTabIndex = 0 // Set the tab index to 0 (Profile tab)
                     }) {
                         Text("Save")
                             .font(.headline)
