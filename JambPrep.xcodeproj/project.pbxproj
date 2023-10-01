@@ -14,7 +14,9 @@
 		1998B0072AB908310021CC60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0062AB908310021CC60 /* ContentView.swift */; };
 		1998B0092AB908350021CC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998B0082AB908350021CC60 /* Assets.xcassets */; };
 		1998B00C2AB908350021CC60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998B00B2AB908350021CC60 /* Preview Assets.xcassets */; };
-		19A39D002AC8CA8600F4B653 /* StudyResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39CFF2AC8CA8600F4B653 /* StudyResources.swift */; };
+		19A39D042AC8EDE700F4B653 /* StudyResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39D032AC8EDE700F4B653 /* StudyResources.swift */; };
+		19A39D062AC8F2CD00F4B653 /* TextbooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */; };
+		19A39D082AC8F73700F4B653 /* textbookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39D072AC8F73700F4B653 /* textbookList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,9 @@
 		1998B0062AB908310021CC60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1998B0082AB908350021CC60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1998B00B2AB908350021CC60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		19A39CFF2AC8CA8600F4B653 /* StudyResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyResources.swift; sourceTree = "<group>"; };
+		19A39D032AC8EDE700F4B653 /* StudyResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyResources.swift; sourceTree = "<group>"; };
+		19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbooksView.swift; sourceTree = "<group>"; };
+		19A39D072AC8F73700F4B653 /* textbookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textbookList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,7 @@
 			children = (
 				1998B0042AB908310021CC60 /* JambPrepApp.swift */,
 				1998B0062AB908310021CC60 /* ContentView.swift */,
-				19A39CFF2AC8CA8600F4B653 /* StudyResources.swift */,
+				19A39D012AC8EC6500F4B653 /* StudyResourcesStuff */,
 				195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */,
 				1912FD222ABB4D7600471B79 /* OnboardingView.swift */,
 				1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */,
@@ -77,6 +81,16 @@
 				1998B00B2AB908350021CC60 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19A39D012AC8EC6500F4B653 /* StudyResourcesStuff */ = {
+			isa = PBXGroup;
+			children = (
+				19A39D032AC8EDE700F4B653 /* StudyResources.swift */,
+				19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */,
+				19A39D072AC8F73700F4B653 /* textbookList.swift */,
+			);
+			path = StudyResourcesStuff;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,11 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1998B0072AB908310021CC60 /* ContentView.swift in Sources */,
+				19A39D082AC8F73700F4B653 /* textbookList.swift in Sources */,
+				19A39D042AC8EDE700F4B653 /* StudyResources.swift in Sources */,
 				1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */,
 				1912FD1B2ABB0E7C00471B79 /* UserInfoView.swift in Sources */,
-				19A39D002AC8CA8600F4B653 /* StudyResources.swift in Sources */,
 				1912FD232ABB4D7600471B79 /* OnboardingView.swift in Sources */,
 				195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */,
+				19A39D062AC8F2CD00F4B653 /* TextbooksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

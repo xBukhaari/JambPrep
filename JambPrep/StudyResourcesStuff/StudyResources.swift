@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct StudyResources: View {
     
     let gridStudyItems = [
@@ -26,26 +28,32 @@ struct StudyResources: View {
                         
                         NavigationLink(destination: Text("Details for \(item)")) {
                             VStack {
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color.green)
-                                    .frame(width: 140, height: 140)
-                                    .overlay(
-                                        Image(imageName)
-                                            .resizable()
-                                            .frame(width: 80, height: 80)
-                                    )
-                                
-                                Text(item)
-                                    .frame(width: 140, height: 20)
-                                    .foregroundColor(Color.white)
-                                    .background(Color.green)
-                                    .font(.caption)
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .fill(Color.white)
+                                        .frame(width: 170, height: 180)
+                                        .overlay(
+                                            VStack {
+                                                padding(1)
+                                                Image(imageName)
+                                                    .resizable()
+                                                    .frame(width: 120, height: 120)
+                                                Text(item)
+                                                    .frame(width: 170, height: 25)
+                                                    .foregroundColor(Color.white)
+                                                    .background(Color.green)
+                                                    .font(.title3)
+                                            }
+                                        )
+                                        .border(Color.green, width:3) // Green border
+                                }.cornerRadius(10)
                             }
                         }
                     }
                 }
                 .padding()
             }
+            .accentColor(Color.green)
             .navigationTitle("Study Resources")
         }
     }
