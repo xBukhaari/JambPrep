@@ -133,8 +133,8 @@ struct OnboardingView_Previews: PreviewProvider {
                 
                 
                 Feature(
-                    title: "Statistics",
-                    description: "Stats of all previous exams taken to help you achieve your goals",
+                    title: "League",
+                    description: "Compete with other students like you to be ranked",
                     icon: "chart.line.uptrend.xyaxis"),
                 
             ],

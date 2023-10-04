@@ -144,11 +144,11 @@ struct UserInfoView: View {
         VStack {
             NavigationView {
                 VStack {
-                    Image("jambLogo")
-                        .resizable()
-                        .frame(width: 69, height: 69)
-                    
                     Form {
+                        Image("jambLogo")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                            .padding([.leading, .trailing], 140)
                         Section(header: Text("Username").bold()) {
                             TextField("Name", text: $name)
                         }
@@ -187,25 +187,25 @@ struct UserInfoView: View {
                                 
                             }
                         }
-                    }
-                    
-                    Button(action: {
-                        userDataViewModel.name = name
-                        userDataViewModel.course = course
-                        userDataViewModel.selectedState = selectedState
-                        userDataViewModel.selectedGrade = selectedGrade
-                        userDataViewModel.selectedFederalUniversity = selectedFederalUniversity
-                        userDataViewModel.selectedStateUniversity = selectedStateUniversity
-                        
-                        selectedTabIndex = 0 // Set the tab index to 0 (Profile tab)
-                    }) {
-                        Text("Save")
-                            .font(.headline)
-                            .frame(maxWidth: 350, maxHeight: 60)
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                            .padding(15)
+                        Button(action: {
+                            userDataViewModel.name = name
+                            userDataViewModel.course = course
+                            userDataViewModel.selectedState = selectedState
+                            userDataViewModel.selectedGrade = selectedGrade
+                            userDataViewModel.selectedFederalUniversity = selectedFederalUniversity
+                            userDataViewModel.selectedStateUniversity = selectedStateUniversity
+                            
+                            selectedTabIndex = 0 // Set the tab index to 0 (Profile tab)
+                        }) {
+                            Text("Save")
+                                .font(.headline)
+                                .frame(maxWidth: 500, maxHeight: 70)
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                            
+                            
+                        }
                     }
                 }
             }

@@ -8,9 +8,7 @@
 import SwiftUI
 
 
-
 struct StudyResources: View {
-    
     let gridStudyItems = [
         GridItem(.flexible(minimum: 150, maximum: 200), spacing: 15),
         GridItem(.flexible(minimum: 150, maximum: 200), spacing: 15),
@@ -19,42 +17,248 @@ struct StudyResources: View {
     let itemImages = ["Textbooks", "Novel", "Syllabus", "Universities", "Polytechnics", "PostUTME", "DirectEntry", "ImportantDates", "Tips"]
     
     var body: some View {
+        
         NavigationView {
-            ScrollView {
-                LazyVGrid(columns: gridStudyItems, spacing: 15) {
-                    ForEach(0..<items.count, id: \.self) { index in
-                        let item = items[index]
-                        let imageName = itemImages[index]
-                        
-                        NavigationLink(destination: Text("Details for \(item)")) {
-                            VStack {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .fill(Color.white)
-                                        .frame(width: 170, height: 180)
-                                        .overlay(
-                                            VStack {
-                                                padding(1)
-                                                Image(imageName)
-                                                    .resizable()
-                                                    .frame(width: 120, height: 120)
-                                                Text(item)
-                                                    .frame(width: 170, height: 25)
-                                                    .foregroundColor(Color.white)
-                                                    .background(Color.green)
-                                                    .font(.title3)
-                                            }
-                                        )
-                                        .border(Color.green, width:3) // Green border
-                                }.cornerRadius(10)
+            ZStack { // Wrap the content in a ZStack
+                Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    LazyVGrid(columns: gridStudyItems, spacing: 15) {
+                        ForEach(0..<items.count, id: \.self) { index in
+                            let item = items[index]
+                            
+                            if item == "Textbooks" {
+                                NavigationLink(destination: TextbooksView()) { // Navigate to TextbooksView
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("Textbooks")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                )
+                                                .border(Color.green, width: 5) // Green border
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            } else if item == "Novel" {
+                                NavigationLink(destination: Novel()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("Novel")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            }
+                            else if item == "Syllabus" {
+                                NavigationLink(destination: Syllabus()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("Syllabus")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            }
+                            else if item == "Universities" {
+                                NavigationLink(destination: Syllabus()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("Universities")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            }
+                            else if item == "Polytechnics" {
+                                NavigationLink(destination: Syllabus()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("Polytechnics")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            }
+                            else if item == "UTME" {
+                                NavigationLink(destination: PostUTME()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("PostUTME")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            }
+                            else if item == "Direct Entry" {
+                                NavigationLink(destination: PostUTME()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("DirectEntry")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            }
+                            else if item == "Important Dates" {
+                                NavigationLink(destination: ImportantDates()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("ImportantDates")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
+                            }
+                            else if item == "Tips" {
+                                NavigationLink(destination: Tips()) {
+                                    VStack {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .fill(Color.white)
+                                                .frame(width: 170, height: 180)
+                                                .overlay(
+                                                    VStack {
+                                                        padding(4)
+                                                        Image("Tips")
+                                                            .resizable()
+                                                            .frame(width: 120, height: 120)
+                                                        
+                                                        Text(item)
+                                                            .foregroundColor(Color.white)
+                                                            .frame(width: 170, height: 40)
+                                                            .background(Color.green)
+                                                            .font(.title3)
+                                                    }
+                                                ).border(Color.green, width: 5)
+                                        }.cornerRadius(10)
+                                    }
+                                }
                             }
                         }
+                        .padding()
                     }
+                    .accentColor(Color.green)
+                    .navigationTitle("Study Resources")
                 }
-                .padding()
             }
-            .accentColor(Color.green)
-            .navigationTitle("Study Resources")
         }
     }
     
