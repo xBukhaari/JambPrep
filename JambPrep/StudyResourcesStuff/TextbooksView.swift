@@ -42,8 +42,10 @@ struct TextbooksView: View {
                 AgricTextbooks()
             } else if textbook.name == "Arabic" {
                 ArabicTextbooks()
-            } else {
-                EmptyView()
+            } else if textbook.name == "Art" {
+                ArtTextbooks()
+            } else if textbook.name == "Biology" {
+                BiologyTextbooks()
             }
         }
     }
