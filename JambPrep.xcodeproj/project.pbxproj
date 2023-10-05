@@ -25,6 +25,7 @@
 		19BB46F42ACBFE390036A1C1 /* DirectEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F32ACBFE390036A1C1 /* DirectEntry.swift */; };
 		19BB46F62ACBFF2C0036A1C1 /* ImportantDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */; };
 		19BB46FA2ACBFFB10036A1C1 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F92ACBFFB10036A1C1 /* Tips.swift */; };
+		19E154092ACEA71400B9E855 /* Agrcultural Science.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E154082ACEA71400B9E855 /* Agrcultural Science.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		19BB46F32ACBFE390036A1C1 /* DirectEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectEntry.swift; sourceTree = "<group>"; };
 		19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantDates.swift; sourceTree = "<group>"; };
 		19BB46F92ACBFFB10036A1C1 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		19E154082ACEA71400B9E855 /* Agrcultural Science.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Agrcultural Science.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		19A39D012AC8EC6500F4B653 /* StudyResourcesStuff */ = {
 			isa = PBXGroup;
 			children = (
+				19E154072ACEA6DD00B9E855 /* SubjectsTextbooks */,
 				19A39D032AC8EDE700F4B653 /* StudyResources.swift */,
 				19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */,
 				19A39D072AC8F73700F4B653 /* textbookList.swift */,
@@ -115,6 +118,14 @@
 				19BB46F92ACBFFB10036A1C1 /* Tips.swift */,
 			);
 			path = StudyResourcesStuff;
+			sourceTree = "<group>";
+		};
+		19E154072ACEA6DD00B9E855 /* SubjectsTextbooks */ = {
+			isa = PBXGroup;
+			children = (
+				19E154082ACEA71400B9E855 /* Agrcultural Science.swift */,
+			);
+			path = SubjectsTextbooks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */,
 				19BB46EC2ACBF94B0036A1C1 /* Syllabus.swift in Sources */,
 				19A39D062AC8F2CD00F4B653 /* TextbooksView.swift in Sources */,
+				19E154092ACEA71400B9E855 /* Agrcultural Science.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

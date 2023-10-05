@@ -18,8 +18,8 @@ struct StudyResources: View {
     
     var body: some View {
         
-        NavigationView {
-            ZStack { // Wrap the content in a ZStack
+        NavigationStack { 
+            ZStack {
                 Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
                 ScrollView {
                     LazyVGrid(columns: gridStudyItems, spacing: 15) {
@@ -27,32 +27,31 @@ struct StudyResources: View {
                             let item = items[index]
                             
                             if item == "Textbooks" {
-                                NavigationLink(destination: TextbooksView()) { // Navigate to TextbooksView
-                                    VStack {
-                                        ZStack {
-                                            RoundedRectangle(cornerRadius: 15)
-                                                .fill(Color.white)
-                                                .frame(width: 170, height: 180)
-                                                .overlay(
-                                                    VStack {
-                                                        padding(4)
-                                                        Image("Textbooks")
-                                                            .resizable()
-                                                            .frame(width: 120, height: 120)
-                                                        
-                                                        
-                                                        Text(item)
-                                                            .foregroundColor(Color.white)
-                                                            .frame(width: 170, height: 40)
-                                                            .background(Color.green)
-                                                            .font(.title3)
-                                                    }
-                                                )
-                                                .border(Color.green, width: 5) // Green border
-                                        }.cornerRadius(10)
-                                    }
-                                }
-                            } else if item == "Novel" {
+                                            NavigationLink(destination: TextbooksView()) {
+                                                VStack {
+                                                    ZStack {
+                                                        RoundedRectangle(cornerRadius: 15)
+                                                            .fill(Color.white)
+                                                            .frame(width: 170, height: 180)
+                                                            .overlay(
+                                                                VStack {
+                                                                    padding(4)
+                                                                    Image("Textbooks")
+                                                                        .resizable()
+                                                                        .frame(width: 120, height: 120)
+                                                                    
+                                                                    Text(item)
+                                                                        .foregroundColor(Color.black)
+                                                                        .frame(width: 170, height: 40)
+                                                                        .background(Color.green)
+                                                                        .font(.title3)
+                                                                }
+                                                            )
+                                                            .border(Color.green, width: 5)
+                                                    }.cornerRadius(10)
+                                                }
+                                            }
+                                        } else if item == "Novel" {
                                 NavigationLink(destination: Novel()) {
                                     VStack {
                                         ZStack {
@@ -67,7 +66,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -92,7 +91,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -117,7 +116,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -142,7 +141,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -167,7 +166,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -192,7 +191,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -217,7 +216,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -242,7 +241,7 @@ struct StudyResources: View {
                                                             .frame(width: 120, height: 120)
                                                         
                                                         Text(item)
-                                                            .foregroundColor(Color.white)
+                                                            .foregroundColor(Color.black)
                                                             .frame(width: 170, height: 40)
                                                             .background(Color.green)
                                                             .font(.title3)
@@ -257,6 +256,7 @@ struct StudyResources: View {
                     }
                     .accentColor(Color.green)
                     .navigationTitle("Study Resources")
+                    
                 }
             }
         }

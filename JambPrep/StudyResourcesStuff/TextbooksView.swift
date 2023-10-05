@@ -11,9 +11,10 @@ struct TextbooksView: View {
     let textbooks = textbookList
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack { // Wrap the content in a ZStack
                 Color.green.opacity(0.25).edgesIgnoringSafeArea(.all) // Green background
+                
                 List {
                     ForEach(textbooks, id: \.self) { textbook in
                         NavigationLink(destination: Text(textbook)) {
@@ -23,16 +24,16 @@ struct TextbooksView: View {
                                     Text(textbook)
                                 }
                                 .padding(15)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .foregroundColor(Color.green)
+                                .frame(width: .infinity)
                                 .font(.title3)
                             }
+                            .background(Color.clear) // Clear background for individual items
                         }
+                        .listRowBackground(Color.clear) // Clear background for list rows
                     }
                 }
-                .listStyle(PlainListStyle()) // Remove the default list background
-                .navigationTitle("JAMB Textbooks 2024")
+                .listStyle(PlainListStyle())
+                .navigationBarTitle("Textbooks 2024") // Set the title here
                 .font(.title3)
             }
         }

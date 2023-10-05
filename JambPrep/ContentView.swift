@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var selectedTabIndex = 0
     @State private var showOnboarding = true
     @State private var shouldNavigateToProfile = false
+    @State private var shouldNavigateToStudyResources = false
     
     var body: some View {
         VStack {
