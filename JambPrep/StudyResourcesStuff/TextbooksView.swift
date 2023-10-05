@@ -8,38 +8,46 @@
 import SwiftUI
 
 struct TextbooksView: View {
-    let textbooks = textbookList
+    struct Textbook: Identifiable {
+        let id = UUID()
+        let name: String
+    }
     
+    let textbooks = textbookList
+    @State private var selectedTextbook: Textbook? = nil
+
     var body: some View {
         NavigationStack {
-            ZStack { // Wrap the content in a ZStack
-                Color.green.opacity(0.25).edgesIgnoringSafeArea(.all) // Green background
+            ZStack {
+                Color.green.opacity(0.25) // Apply the background color here
+                    .edgesIgnoringSafeArea(.all)
                 
-                List {
-                    ForEach(textbooks, id: \.self) { textbook in
-                        NavigationLink(destination: Text(textbook)) {
-                            VStack {
-                                HStack {
-                                    Image(systemName: "text.book.closed")
-                                    Text(textbook)
-                                }
-                                .padding(15)
-                                .frame(width: .infinity)
-                                .font(.title3)
-                            }
-                            .background(Color.clear) // Clear background for individual items
-                        }
-                        .listRowBackground(Color.clear) // Clear background for list rows
+                List(textbooks, id: \.self) { textbook in
+                    Button(action: {
+                        selectedTextbook = Textbook(name: textbook)
+                    }) {
+                        Text(textbook)
+                            .font(.title3)
+                            .padding(13)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(Color.clear)
                     }
                 }
-                .listStyle(PlainListStyle())
-                .navigationBarTitle("Textbooks 2024") // Set the title here
-                .font(.title3)
+                .navigationBarTitle(Text("TEXTBOOKS"))
+            }
+            .background(Color.green.opacity(0.25)) // Apply the background color to the entire view
+        }
+        .sheet(item: $selectedTextbook) { textbook in
+            if textbook.name == "Agricultural Science" {
+                AgricTextbooks()
+            } else if textbook.name == "Arabic" {
+                ArabicTextbooks()
+            } else {
+                EmptyView()
             }
         }
     }
 }
-
 struct TextbooksView_Previews: PreviewProvider {
     static var previews: some View {
         TextbooksView()

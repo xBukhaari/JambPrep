@@ -1,5 +1,5 @@
 //
-//  Agrcultural Science.swift
+//  AgricTextbooks.swift
 //  JambPrep
 //
 //  Created by Bukhari Sani on 05/10/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Agricultural_Science: View {
+struct AgricTextbooks: View {
     var body: some View {
         ZStack {
             Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
@@ -27,8 +27,8 @@ struct Agricultural_Science: View {
     }
 }
 
-struct Agricultural_Science_Previews: PreviewProvider {
+struct AgricTextbooks_Previews: PreviewProvider {
     static var previews: some View {
-        Agricultural_Science()
+        AgricTextbooks()
     }
 }
