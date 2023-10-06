@@ -46,6 +46,10 @@ struct TextbooksView: View {
                 BiologyTextbooks()
             } else if textbook.name == "Chemistry" {
                 ChemistryTextbooks()
+            } else if textbook.name == "Commerce" {
+                CommerceTextbooks()
+            } else if textbook.name == "Computer Studies" {
+                ComputerStudiesTextbooks()
             }
         }
     }
