@@ -19,8 +19,7 @@ struct TextbooksView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.green.opacity(0.25) // Apply the background color here
-                    .edgesIgnoringSafeArea(.all)
+                Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
                 
                 List(textbooks, id: \.self) { textbook in
                     Button(action: {
@@ -35,7 +34,6 @@ struct TextbooksView: View {
                 }
                 .navigationBarTitle(Text("TEXTBOOKS"))
             }
-            .background(Color.green.opacity(0.25)) // Apply the background color to the entire view
         }
         .sheet(item: $selectedTextbook) { textbook in
             if textbook.name == "Agricultural Science" {
@@ -46,6 +44,8 @@ struct TextbooksView: View {
                 ArtTextbooks()
             } else if textbook.name == "Biology" {
                 BiologyTextbooks()
+            } else if textbook.name == "Chemistry" {
+                ChemistryTextbooks()
             }
         }
     }
