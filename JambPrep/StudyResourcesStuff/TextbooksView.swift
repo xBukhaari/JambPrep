@@ -50,6 +50,42 @@ struct TextbooksView: View {
                 CommerceTextbooks()
             } else if textbook.name == "Computer Studies" {
                 ComputerStudiesTextbooks()
+            } else if textbook.name == "Christian Religious Studies" {
+                CRKTextbooks()
+            }  else if textbook.name == "Economics" {
+                EconomicsTextbooks()
+            } else if textbook.name == "French" {
+                FrenchTextbooks()
+            } else if textbook.name == "Geography" {
+                GeographyTextbooks()
+            } else if textbook.name == "Government" {
+                Governmenttextbooks()
+            } else if textbook.name == "Hausa" {
+                HausaTextbooks()
+            } else if textbook.name == "History" {
+                HistoryTextbooks()
+            } else if textbook.name == "Home Economics" {
+                HomeEconsTextbooks()
+            } else if textbook.name == "Igbo" {
+                IgboTextbooks()
+            } else if textbook.name == "Islamic Studies" {
+                IslamicStudiesTextbooks()
+            } else if textbook.name == "Literature in English" {
+                LiteratureInEnglishTextbooks()
+            } else if textbook.name == "Mathematics" {
+                MathematicsTextbooks()
+            } else if textbook.name == "Music" {
+                MusicTextbooks()
+            } else if textbook.name == "Physical & Health Education (PHE)" {
+                PHETextbooks()
+            } else if textbook.name == "Physics" {
+               PhysicsTextbooks()
+            }  else if textbook.name == "Principles of Accounts" {
+                PrinciplesOfAccountTextbooks()
+            } else if textbook.name == "Use of English"{
+                UseOfEnglishTextbooks()
+            } else if textbook.name == "Yoruba" {
+                YorubaTextbooks()
             }
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Universities: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Name of all available federal and state universities with their cut off mark")
     }
 }
 
