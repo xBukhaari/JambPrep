@@ -30,7 +30,7 @@ struct ContentView: View {
                 
                 
                 TabView (selection: $selectedTabIndex) {
-                    // Profile Tab
+               
                     Text("Profile Content")
                         .tabItem {
                             Image(systemName: "person.circle")
@@ -38,14 +38,13 @@ struct ContentView: View {
                         }
                         .tag(0)
                     
-                    // Subject Selection Tab
                     Text("Subject Selection Content")
                         .tabItem {
                             Image(systemName: "list.bullet")
                             Text("Exams")
                         }
                     
-                    // Study Resources Tab
+                   
                     Text("Study Resources Content")
                         .tabItem {
                             Image(systemName: "books.vertical.fill")
