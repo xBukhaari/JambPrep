@@ -18,96 +18,82 @@ struct Feature: Identifiable {
 struct OnboardingView: View {
     var onContinue: () -> Void
     @State var appName: String
-    @State private var closingOnboarding = false
+    @State private var showingOnboarding = true
     
     let features: [Feature]
     let color: Color?
     
-    @State private var showingOnboarding = false // Declare it here
-    
     var body: some View {
         NavigationView {
-            VStack {}
-                .hidden()
-                .onAppear() {
-                    let defaults = UserDefaults.standard
-                    let seen = defaults.bool(forKey: "OnboardingSeen")
-                    if !seen {
-                        //if the onboarding has not been seen
-                        showingOnboarding = true
-                    }
-                }
-                .sheet(isPresented: $showingOnboarding) {
+            ZStack {
+                Color.green.opacity(0.35)
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    Text("Welcome to \(appName)")
+                        .font(.system(size: 30))
+                        .fontWeight(.bold)
+                        .padding(.vertical, 25)
+                        .multilineTextAlignment(.center)
+                    Spacer()
                     VStack {
-                        Text("Welcome to \(appName)")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .padding(.vertical, 40)
-                            .multilineTextAlignment(.center)
-                        Spacer()
-                        VStack {
-                            ForEach(features) { feature in
-                                VStack(alignment: .leading) {
-                                    HStack {
-                                        if let icon = feature.icon {
-                                            Image(systemName: icon)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(width: 45, alignment: .center)
-                                                .clipped()
-                                                .foregroundColor(color ?? Color.green)
-                                                .padding(.trailing, 15)
-                                                .padding(.vertical, 15)
-                                        }
-                                        VStack(alignment: .leading) {
-                                            Text(feature.title)
-                                                .fontWeight(.bold)
-                                                .font(.system(size: 16))
-                                            Text(feature.description)
-                                                .font(.system(size: 15))
-                                        }
-                                        Spacer()
+                        ForEach(features) { feature in
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    if let icon = feature.icon {
+                                        Image(systemName: icon)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 45, alignment: .center)
+                                            .clipped()
+                                            .foregroundColor(color ?? Color.green)
+                                            .padding(.trailing, 15)
+                                            .padding(.vertical, 15)
                                     }
+                                    VStack(alignment: .leading) {
+                                        Text(feature.title)
+                                            .fontWeight(.bold)
+                                            .font(.system(size: 18))
+                                        Text(feature.description)
+                                            .font(.system(size: 16))
+                                    }
+                                    Spacer()
                                 }
-                                .padding(.horizontal,20)
-                                .padding(.bottom, 20)
                             }
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 20)
                         }
-                        .padding(.bottom, 30)
-                        Spacer()
-                        
-                        NavigationLink(destination: UserInfoView(userDataViewModel: UserDataViewModel(), selectedTabIndex: .constant(0))) {
-                        }
-                            Button(action: {
-                                UserDefaults.standard.set(true, forKey: "OnboardingSeen")
-                                onContinue() // Call the onContinue closure to navigate to UserInfoView
-                            }) {
-                                Text("Get Started")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .frame(width: 200, height: 65)
-                                    .background(color ?? Color.green)
-                                    .cornerRadius(12)
-                            }
-                        .onDisappear() {
-                            UserDefaults.standard.set(true, forKey: "OnboardingSeen")
-                            onContinue() // Call the onContinue closure to navigate to UserInfoView
-                        }
-                        .padding(.top, 15)
-                        .padding(.bottom, 50)
                     }
-                    .padding()
+                    .padding(.bottom, 30)
+                    Spacer()
+                    NavigationLink(destination: ContentView()) {
+                        Text("Get Started")
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 65)
+                            .background(color ?? Color.green)
+                            .cornerRadius(12)
+                    }
+                    .onDisappear() {
+                        UserDefaults.standard.set(true, forKey: "OnboardingSeen")
+                        onContinue()
+                    }
+                    .padding(.top, 15)
+                    .padding(.bottom, 50)
                 }
+                .padding()
+            }
         }
     }
 }
+
 
 
 struct OnboardingView_Previews: PreviewProvider {
     @State static var showingOnboarding = false
     static var previews: some View {
         OnboardingView(
-            onContinue: {}, // Empty closure
+            onContinue: {},
             appName: "JambPrep",
             features: [
 
@@ -134,11 +120,10 @@ struct OnboardingView_Previews: PreviewProvider {
                 
                 Feature(
                     title: "League",
-                    description: "Compete with other students like you to be ranked",
+                    description: "Compete with other students like you to be ranked weekly.",
                     icon: "chart.line.uptrend.xyaxis"),
                 
             ],
             color: Color.green)
     }
 }
-

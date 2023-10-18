@@ -17,8 +17,9 @@ struct TextbooksView: View {
     @State private var selectedTextbook: Textbook? = nil
 
     var body: some View {
+        ZStack {
+            Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
         NavigationStack {
-            ZStack {
                 List(textbooks, id: \.self) { textbook in
                     Button(action: {
                         selectedTextbook = Textbook(name: textbook)
@@ -27,14 +28,13 @@ struct TextbooksView: View {
                             .font(.title3)
                             .padding(13)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            
+                        
                     }
                 }
                 .navigationBarTitle(Text("TEXTBOOKS"))
             }
-           
-           
         }
+        
         .sheet(item: $selectedTextbook) { textbook in
             if textbook.name == "Agricultural Science" {
                 AgricTextbooks()
