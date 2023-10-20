@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1905CB512AE3379B0055B593 /* ProfileSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905CB502AE3379B0055B593 /* ProfileSample.swift */; };
 		1912FD1B2ABB0E7C00471B79 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */; };
 		1912FD232ABB4D7600471B79 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD222ABB4D7600471B79 /* OnboardingView.swift */; };
 		195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1905CB502AE3379B0055B593 /* ProfileSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSample.swift; sourceTree = "<group>"; };
 		1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		1912FD222ABB4D7600471B79 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */,
 				1912FD222ABB4D7600471B79 /* OnboardingView.swift */,
 				1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */,
+				1905CB502AE3379B0055B593 /* ProfileSample.swift */,
 				1998B0082AB908350021CC60 /* Assets.xcassets */,
 				1998B00A2AB908350021CC60 /* Preview Content */,
 			);
@@ -275,6 +278,7 @@
 				19E154112ACF550000B9E855 /* BiologyTextbooks.swift in Sources */,
 				19E154352ACF590900B9E855 /* PhysicsTextbooks.swift in Sources */,
 				19BB46F42ACBFE390036A1C1 /* DirectEntry.swift in Sources */,
+				1905CB512AE3379B0055B593 /* ProfileSample.swift in Sources */,
 				19E1541B2ACF578A00B9E855 /* EconomicsTextbooks.swift in Sources */,
 				19BB46EE2ACBF9E80036A1C1 /* PostUTME.swift in Sources */,
 				19E154232ACF583600B9E855 /* HausaTextbooks.swift in Sources */,
