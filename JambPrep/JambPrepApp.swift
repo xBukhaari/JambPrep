@@ -11,18 +11,17 @@ import SwiftUI
 struct JambPrepApp: App {
     @StateObject private var userDataViewModel = UserDataViewModel()
     @State private var isOnboardingSeen = false
-
     var body: some Scene {
-        WindowGroup {
-            if isOnboardingSeen {
-                UserInfoView(userDataViewModel: userDataViewModel, selectedTabIndex: .constant(0))
-            } else {
-                OnboardingView(
-                    onContinue: {
-                        isOnboardingSeen = true
-                    },
-                    appName: "JambPrep",
-                    features: [
+            WindowGroup {
+                if isOnboardingSeen {
+                    ContentView(userDataViewModel: userDataViewModel)
+                } else {
+                    OnboardingView(
+                        onContinue: {
+                            isOnboardingSeen = true
+                        },
+                        appName: "JambPrep",
+                        features: [
                          Feature(
                          title: "Access To Past Questions",
                          description: "Over 100,000 past questions are available for you to practice.",

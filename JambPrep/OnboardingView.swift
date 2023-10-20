@@ -5,7 +5,6 @@
 //  Created by Bukhari Sani on 20/09/2023.
 //
 
-
 import SwiftUI
 
 struct Feature: Identifiable {
@@ -18,75 +17,90 @@ struct Feature: Identifiable {
 struct OnboardingView: View {
     var onContinue: () -> Void
     @State var appName: String
-    @State private var showingOnboarding = true
+    @State private var closingOnboarding = false
     
     let features: [Feature]
     let color: Color?
     
+    @State private var showingOnboarding = true
+    
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.green.opacity(0.35)
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack {
-                    Text("Welcome to \(appName)")
-                        .font(.system(size: 30))
-                        .fontWeight(.bold)
-                        .padding(.vertical, 25)
-                        .multilineTextAlignment(.center)
-                    Spacer()
+            VStack {}
+                .hidden()
+                .onAppear() {
+                    let defaults = UserDefaults.standard
+                    let seen = defaults.bool(forKey: "OnboardingSeen")
+                    if !seen {
+                        showingOnboarding = true
+                    }
+                }
+                .sheet(isPresented: $showingOnboarding) {
                     VStack {
-                        ForEach(features) { feature in
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    if let icon = feature.icon {
-                                        Image(systemName: icon)
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 45, alignment: .center)
-                                            .clipped()
-                                            .foregroundColor(color ?? Color.green)
-                                            .padding(.trailing, 15)
-                                            .padding(.vertical, 15)
+                        Text("Welcome to \(appName)")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 40)
+                            .multilineTextAlignment(.center)
+                        Spacer()
+                        VStack {
+                            ForEach(features) { feature in
+                                VStack(alignment: .leading) {
+                                    HStack {
+                                        if let icon = feature.icon {
+                                            Image(systemName: icon)
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 45, alignment: .center)
+                                                .clipped()
+                                                .foregroundColor(color ?? Color.green)
+                                                .padding(.trailing, 15)
+                                                .padding(.vertical, 15)
+                                        }
+                                        VStack(alignment: .leading) {
+                                            Text(feature.title)
+                                                .fontWeight(.bold)
+                                                .font(.system(size: 16))
+                                            Text(feature.description)
+                                                .font(.system(size: 15))
+                                        }
+                                        Spacer()
                                     }
-                                    VStack(alignment: .leading) {
-                                        Text(feature.title)
-                                            .fontWeight(.bold)
-                                            .font(.system(size: 18))
-                                        Text(feature.description)
-                                            .font(.system(size: 16))
-                                    }
-                                    Spacer()
                                 }
+                                .padding(.horizontal, 20)
+                                .padding(.bottom, 20)
                             }
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 20)
+                        }
+                        .padding(.bottom, 30)
+                        Spacer()
+                        
+                        Button(action: {
+                            UserDefaults.standard.set(true, forKey: "OnboardingSeen")
+                            onContinue()
+                        }) {
+                            Text("Get Started")
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .frame(width: 300, height: 65)
+                                .background(color ?? Color.green)
+                                .cornerRadius(12)
+                        }
+                        .onDisappear() {
+                            UserDefaults.standard.set(true, forKey: "OnboardingSeen")
+                            onContinue()
+                        }
+                        .padding(.top, 15)
+                        .padding(.bottom, 50)
+                        
+                        NavigationLink(destination: ContentView()) { // Navigate to ContentView
+                            EmptyView()
                         }
                     }
-                    .padding(.bottom, 30)
-                    Spacer()
-                    NavigationLink(destination: ContentView()) {
-                        Text("Get Started")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 65)
-                            .background(color ?? Color.green)
-                            .cornerRadius(12)
-                    }
-                    .onDisappear() {
-                        UserDefaults.standard.set(true, forKey: "OnboardingSeen")
-                        onContinue()
-                    }
-                    .padding(.top, 15)
-                    .padding(.bottom, 50)
-                }
-                .padding()
+                    .padding()
             }
         }
     }
 }
-
 
 
 struct OnboardingView_Previews: PreviewProvider {
@@ -120,7 +134,7 @@ struct OnboardingView_Previews: PreviewProvider {
                 
                 Feature(
                     title: "League",
-                    description: "Compete with other students like you to be ranked weekly.",
+                    description: "Compete with other students like you to be ranked",
                     icon: "chart.line.uptrend.xyaxis"),
                 
             ],

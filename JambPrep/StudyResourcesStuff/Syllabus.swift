@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Syllabus: View {
     var body: some View {
-        Text("The Syllabus for AAgurculatural Science")
+        Text("The Syllabus for all UTME subjects")
     }
 }
 

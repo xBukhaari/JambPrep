@@ -10,8 +10,8 @@ import SwiftUI
 
 struct StudyResources: View {
     let gridStudyItems = [
-        GridItem(.flexible(minimum: 150, maximum: 200), spacing: 15),
-        GridItem(.flexible(minimum: 150, maximum: 200), spacing: 15),
+        GridItem(.flexible(minimum: 150, maximum: 200), spacing: 10),
+        GridItem(.flexible(minimum: 150, maximum: 200), spacing: 10),
     ]
     
     let itemImages = ["Textbooks", "Novel", "Syllabus", "Universities", "Polytechnics", "PostUTME", "DirectEntry", "ImportantDates", "Tips"]
@@ -22,7 +22,7 @@ struct StudyResources: View {
             ZStack {
                 Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
                 ScrollView {
-                    LazyVGrid(columns: gridStudyItems, spacing: 15) {
+                    LazyVGrid(columns: gridStudyItems, spacing: 0.10) {
                         ForEach(0..<items.count, id: \.self) { index in
                             let item = items[index]
                             

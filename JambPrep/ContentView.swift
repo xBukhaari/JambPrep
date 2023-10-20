@@ -20,14 +20,12 @@ struct ContentView: View {
             Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
             VStack {
 
-                
                 Text("Welcome \(userDataViewModel.name)")
-                    .font(.system(.largeTitle, weight: .bold))
+                    .font(.system(size: 28, weight: .bold)) 
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .clipped()
                     .padding(.leading)
                     .padding(.bottom, 8)
-                
                 
                 TabView (selection: $selectedTabIndex) {
                

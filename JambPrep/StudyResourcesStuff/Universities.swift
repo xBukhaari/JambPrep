@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Universities: View {
     var body: some View {
-        Text("Name of all available federal and state universities with their cut off mark")
+        Text("All federal and state universities + cut off mark")
     }
 }
 
