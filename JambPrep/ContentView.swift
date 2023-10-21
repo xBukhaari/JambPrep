@@ -21,7 +21,7 @@ struct ContentView: View {
             VStack {
 
                 Text("Welcome \(userDataViewModel.name)")
-                    .font(.system(size: 28, weight: .bold)) 
+                    .font(.system(size: 25, weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .clipped()
                     .padding(.leading)
@@ -70,8 +70,8 @@ struct ContentView: View {
                 }
             }
             .accentColor(Color.green)
-            .background(Color.white) // Add a background color to see the content clearly
-            .edgesIgnoringSafeArea(.bottom) // Ignore safe area to make tabs appear at the bottom
+            .background(Color.white)
+            .edgesIgnoringSafeArea(.bottom)
         }
     }
 }

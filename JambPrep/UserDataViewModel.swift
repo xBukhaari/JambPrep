@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class UserDataViewModel: ObservableObject {
-    @Published var name: String = "AbdulQadeer"
+    @Published var name: String = "abdulQadeer"
     @Published var selectedState: String = "Kaduna"
     @Published var selectedStateUniversity: String = "Kaduna State University"
     @Published var course: String = ""

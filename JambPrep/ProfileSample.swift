@@ -18,7 +18,7 @@ struct ProfileView: View {
                     .overlay(Circle().stroke(Color.green, lineWidth: 4))
                     .padding(.bottom, 20)
                 
-                Text("Name: AbdulQadeer Bukhari")
+                Text("Name: AbdulQadeer Bukhari Sani")
                     .font(.title2)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 5)
@@ -43,7 +43,7 @@ struct ProfileView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 5)
                 
-                Text("Streak: 27 Days")
+                Text("Streak: 77 Days🔥")
                     .font(.title2)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 5)
