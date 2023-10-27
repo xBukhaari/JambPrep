@@ -12,16 +12,16 @@ struct IslamicStudiesTextbooks: View {
             ZStack {
                 Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
                 VStack(alignment: .leading, spacing: 24) {
-                    Text("1. A Textbook for Year 11 – Computer Studies Bibhya Sharma, Shaveen Singh & Vijay Singh, Publisher: Technology and Employment Skills Training Ministry of Education, Fiji.")
-                    Text("2. Addan Emmanuel (2013). My Computer for Senior Secondary Schools 1, 2, 3 with Practical Training CD. Valueplus Publication Limited.")
-                    Text("3. Adebisi, A. J. (2013). Fundamentals of Computer Studies, Nigeria: Expert Consults, Available on https://www.researchgate.net/publication/258339295_FUNDAMENTALS_OF_COMPUTER_STUDIES")
-                    Text("4. Adedapo F. O. Mitchell A. S. and Agunbiade D. A. (Assessed on August 6, 2021): Online with Computer Senior Secondary 2; rasmedpublications.com")
-                    Text("5.Brookshear, J. G. (1991). Computer Science: An Overview. Benjamin-Cummings Publishing Co. Inc..")
-                    Text("6. Chiemeke Stella C., Souley Boukari, Olumide B. Longe (Assessed on August 6, 2021); Computer Studies for Senior Secondary Schools; University Press Plc., upssbookshop.com")
-                    Text("7. Doyle, S (1995). Computer Studies for You, USA: Nelson Thomas Ltd, 2nd Edition. Available at https://www.amazon.com/GCSC-Computer-Studies-You/dp/0748703810")
-                    Text("8. Driscoll, T. & Dolden R. (1998). Computer Studies and Information Technology (The Motivate Series), Nigeria: Macmillan Education, Available at https://amazon.com/ComputerStudies-Information-Technology-Motivate/dp/033359834")
-                    Text("9.Ojo D. J. (2018). Senior Secondary School Certificate Examination on Data Processing. Past Questions and Answers (2014 – 2020). Published by TONAD Publishers Limited. (Theory, Objectives and Practical)")
-                    Text("10. Henderson, P. (1987, February), Modern Introductory Computer Science. In Proceedings of the eighteen SIGCSE technical symposium on Computer Science education (pp. 183-190)..")
+                    Text("1. Abdul, M.O.A. (1976) Studies in Islam Series Book 3, Lagos: IPB")
+                    Text("2. AAbdul, M.O.A. (1982) Studies in Islam Series Book 2, Lagos: IPB")
+                    Text("3. Abdul, M.O.A. (1988)The Classical Caliphate, Lagos: IPB")
+                    Text("4. Abdulrahman and Canham (n.d) The Ink of the Scholar, CUP")
+                    Text("5. Ali, A.Y. (1975), The Holy Qur’an Text: Translation and Commentary Leicester The Islamic Foundation.")
+                    Text("6. Ali, M.M. (Undated) The Religion of Islam, Lahore")
+                    Text("7. Doi, A. R. I (1997) Shariah: The Islamic Law; Kuala Lumpur: Noordeen.")
+                    Text("8. Hay Kal, M. (1982) The Life of Muhammad (SAW), Academic Press.")
+                    Text("9. Lemu, A. (1992) Methodology of Primary Islamic Studies, Lagos: IPB.")
+                    Text("10. Quadri, Y.A. et al (1990) Al-Iziyyah for the English Audience, Ijebu Ode: Shebiotio Publication.")
                     
                 }
             }

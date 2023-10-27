@@ -12,16 +12,15 @@ struct Governmenttextbooks: View {
             ZStack {
                 Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
                 VStack(alignment: .leading, spacing: 24) {
-                    Text("1. A Textbook for Year 11 – Computer Studies Bibhya Sharma, Shaveen Singh & Vijay Singh, Publisher: Technology and Employment Skills Training Ministry of Education, Fiji.")
-                    Text("2. Addan Emmanuel (2013). My Computer for Senior Secondary Schools 1, 2, 3 with Practical Training CD. Valueplus Publication Limited.")
-                    Text("3. Adebisi, A. J. (2013). Fundamentals of Computer Studies, Nigeria: Expert Consults, Available on https://www.researchgate.net/publication/258339295_FUNDAMENTALS_OF_COMPUTER_STUDIES")
-                    Text("4. Adedapo F. O. Mitchell A. S. and Agunbiade D. A. (Assessed on August 6, 2021): Online with Computer Senior Secondary 2; rasmedpublications.com")
-                    Text("5.Brookshear, J. G. (1991). Computer Science: An Overview. Benjamin-Cummings Publishing Co. Inc..")
-                    Text("6. Chiemeke Stella C., Souley Boukari, Olumide B. Longe (Assessed on August 6, 2021); Computer Studies for Senior Secondary Schools; University Press Plc., upssbookshop.com")
-                    Text("7. Doyle, S (1995). Computer Studies for You, USA: Nelson Thomas Ltd, 2nd Edition. Available at https://www.amazon.com/GCSC-Computer-Studies-You/dp/0748703810")
-                    Text("8. Driscoll, T. & Dolden R. (1998). Computer Studies and Information Technology (The Motivate Series), Nigeria: Macmillan Education, Available at https://amazon.com/ComputerStudies-Information-Technology-Motivate/dp/033359834")
-                    Text("9.Ojo D. J. (2018). Senior Secondary School Certificate Examination on Data Processing. Past Questions and Answers (2014 – 2020). Published by TONAD Publishers Limited. (Theory, Objectives and Practical)")
-                    Text("10. Henderson, P. (1987, February), Modern Introductory Computer Science. In Proceedings of the eighteen SIGCSE technical symposium on Computer Science education (pp. 183-190)..")
+                    Text("1. Adigwe, F (1985) Essentials of Government for West Africa, Ibadan: University Press Plc.")
+                    Text("2. Anifowose, R and Enemuo, F. C (eds)(1999) Elements of Politics, Lagos; Malthouse Press Limited.")
+                    Text("3. Appadorai, A. (1978) The Substance of Politics, London: Oxford University Press.")
+                    Text("4. Ball, A. R. (1983) Modern Politics and Government, London: macmillan.")
+                    Text("5.Ofoegbu, R. (1977) Government for the Certificate Year, London: George Allen and Unwin.")
+                    Text("6. Olawale, J. B (1987) New Topics on Ordinary Level Government, Ilesha: Jola Publishing")
+                    Text("7. Oyediran, O. Nwosu, H., Takaya, B., Anifowoshe, R., Femi, B., Godwill, O. and Adigun, A. (1990) Government for Senior Secondary Schools, Books 1, 2 and 3, Ibadan: Longman.")
+                    Text("8. Oyovbaire, S., Oguna, A. E. C., Amucheazi, E. C., Coker, H. o. and Oshuntuyi, O. (2001) Countdown to Senior Secondary Certifcate Examination: Government, Ibadan: Evans.")
+                    Text("9. Oyeneye, I., Onyenwenu, M. and Olusunde, B. E. (2000) Round-Up Government for Senior Secondary School Certifcate Examination: A complete Guide, Ibadan: Longman.")
                     
                 }
             }

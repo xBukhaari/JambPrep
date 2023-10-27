@@ -12,16 +12,16 @@ struct PrinciplesOfAccountTextbooks: View {
             ZStack {
                 Color.green.opacity(0.25).edgesIgnoringSafeArea(.all)
                 VStack(alignment: .leading, spacing: 24) {
-                    Text("1. A Textbook for Year 11 – Computer Studies Bibhya Sharma, Shaveen Singh & Vijay Singh, Publisher: Technology and Employment Skills Training Ministry of Education, Fiji.")
-                    Text("2. Addan Emmanuel (2013). My Computer for Senior Secondary Schools 1, 2, 3 with Practical Training CD. Valueplus Publication Limited.")
-                    Text("3. Adebisi, A. J. (2013). Fundamentals of Computer Studies, Nigeria: Expert Consults, Available on https://www.researchgate.net/publication/258339295_FUNDAMENTALS_OF_COMPUTER_STUDIES")
-                    Text("4. Adedapo F. O. Mitchell A. S. and Agunbiade D. A. (Assessed on August 6, 2021): Online with Computer Senior Secondary 2; rasmedpublications.com")
-                    Text("5.Brookshear, J. G. (1991). Computer Science: An Overview. Benjamin-Cummings Publishing Co. Inc..")
-                    Text("6. Chiemeke Stella C., Souley Boukari, Olumide B. Longe (Assessed on August 6, 2021); Computer Studies for Senior Secondary Schools; University Press Plc., upssbookshop.com")
-                    Text("7. Doyle, S (1995). Computer Studies for You, USA: Nelson Thomas Ltd, 2nd Edition. Available at https://www.amazon.com/GCSC-Computer-Studies-You/dp/0748703810")
-                    Text("8. Driscoll, T. & Dolden R. (1998). Computer Studies and Information Technology (The Motivate Series), Nigeria: Macmillan Education, Available at https://amazon.com/ComputerStudies-Information-Technology-Motivate/dp/033359834")
-                    Text("9.Ojo D. J. (2018). Senior Secondary School Certificate Examination on Data Processing. Past Questions and Answers (2014 – 2020). Published by TONAD Publishers Limited. (Theory, Objectives and Practical)")
-                    Text("10. Henderson, P. (1987, February), Modern Introductory Computer Science. In Proceedings of the eighteen SIGCSE technical symposium on Computer Science education (pp. 183-190)..")
+                    Text("1. Abdullahi D. Z. (2014) Modern Financial Accounting, Husab Global Press Concept Ltd.")
+                    Text("2. Adeifa O. Ajileye, J. O and Oluwasanna, R. O (2001) Get your Financial Accounting Right. Book One: Oyo, Tenlad Press International.")
+                    Text("3. Ajileye, J. O. and Adetifa O. (2001) Get your Financial Accounting Right, Book Two: Lagos: De Hadey Printing Services")
+                    Text("4. Akinduko, A. O (2001) Basic Accounting: Akure: Spetins")
+                    Text("5.Awoyemi, E. O. (1989) A guide to Government Accounting and Internal Audit, Ibadan: Onibonje Press.")
+                    Text("6. Dodge, R. (2002) Foundation of Business Accounting, (Second Edition), Bershire: Chapman and Hall")
+                    Text("7. Ekwere, A. B. (1997) Contemporary Accounting, Abuja: Aflon Finance (Control and Management) Act 1959")
+                    Text("8. Ekwue K. C. (2010) Principles of Accounts, Book 1 & 2, Adson Publishing Company, Onitsha")
+                    Text("9. Frankwood and Alan S. (2002) Frankwood’s Business Accounting, Prentice Hall International Edition")
+
                     
                 }
             }
