@@ -26,7 +26,7 @@ struct TextbooksView: View {
                     }) {
                         Text(textbook)
                             .font(.title3)
-                            .padding(13)
+                            .padding(10)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                     }

@@ -20,10 +20,7 @@
 		19A39D082AC8F73700F4B653 /* textbookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39D072AC8F73700F4B653 /* textbookList.swift */; };
 		19BB46EA2ACBF8FE0036A1C1 /* Novel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46E92ACBF8FE0036A1C1 /* Novel.swift */; };
 		19BB46EC2ACBF94B0036A1C1 /* Syllabus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */; };
-		19BB46EE2ACBF9E80036A1C1 /* PostUTME.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46ED2ACBF9E80036A1C1 /* PostUTME.swift */; };
 		19BB46F02ACBFB270036A1C1 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46EF2ACBFB270036A1C1 /* Universities.swift */; };
-		19BB46F22ACBFCAC0036A1C1 /* Polytechnics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F12ACBFCAC0036A1C1 /* Polytechnics.swift */; };
-		19BB46F42ACBFE390036A1C1 /* DirectEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F32ACBFE390036A1C1 /* DirectEntry.swift */; };
 		19BB46F62ACBFF2C0036A1C1 /* ImportantDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */; };
 		19BB46FA2ACBFFB10036A1C1 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F92ACBFFB10036A1C1 /* Tips.swift */; };
 		19E1540B2ACEBF3B00B9E855 /* AgricTextbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1540A2ACEBF3B00B9E855 /* AgricTextbooks.swift */; };
@@ -68,10 +65,7 @@
 		19A39D072AC8F73700F4B653 /* textbookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textbookList.swift; sourceTree = "<group>"; };
 		19BB46E92ACBF8FE0036A1C1 /* Novel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel.swift; sourceTree = "<group>"; };
 		19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllabus.swift; sourceTree = "<group>"; };
-		19BB46ED2ACBF9E80036A1C1 /* PostUTME.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUTME.swift; sourceTree = "<group>"; };
 		19BB46EF2ACBFB270036A1C1 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
-		19BB46F12ACBFCAC0036A1C1 /* Polytechnics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polytechnics.swift; sourceTree = "<group>"; };
-		19BB46F32ACBFE390036A1C1 /* DirectEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectEntry.swift; sourceTree = "<group>"; };
 		19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantDates.swift; sourceTree = "<group>"; };
 		19BB46F92ACBFFB10036A1C1 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		19E1540A2ACEBF3B00B9E855 /* AgricTextbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgricTextbooks.swift; sourceTree = "<group>"; };
@@ -161,10 +155,7 @@
 				19A39D072AC8F73700F4B653 /* textbookList.swift */,
 				19BB46E92ACBF8FE0036A1C1 /* Novel.swift */,
 				19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */,
-				19BB46ED2ACBF9E80036A1C1 /* PostUTME.swift */,
 				19BB46EF2ACBFB270036A1C1 /* Universities.swift */,
-				19BB46F12ACBFCAC0036A1C1 /* Polytechnics.swift */,
-				19BB46F32ACBFE390036A1C1 /* DirectEntry.swift */,
 				19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */,
 				19BB46F92ACBFFB10036A1C1 /* Tips.swift */,
 			);
@@ -277,10 +268,8 @@
 				1998B0072AB908310021CC60 /* ContentView.swift in Sources */,
 				19E154112ACF550000B9E855 /* BiologyTextbooks.swift in Sources */,
 				19E154352ACF590900B9E855 /* PhysicsTextbooks.swift in Sources */,
-				19BB46F42ACBFE390036A1C1 /* DirectEntry.swift in Sources */,
 				1905CB512AE3379B0055B593 /* ProfileSample.swift in Sources */,
 				19E1541B2ACF578A00B9E855 /* EconomicsTextbooks.swift in Sources */,
-				19BB46EE2ACBF9E80036A1C1 /* PostUTME.swift in Sources */,
 				19E154232ACF583600B9E855 /* HausaTextbooks.swift in Sources */,
 				19A39D082AC8F73700F4B653 /* textbookList.swift in Sources */,
 				19E1542D2ACF58AA00B9E855 /* LiteratureInEnglishTextbooks.swift in Sources */,
@@ -303,7 +292,6 @@
 				19BB46F62ACBFF2C0036A1C1 /* ImportantDates.swift in Sources */,
 				1912FD1B2ABB0E7C00471B79 /* UserInfoView.swift in Sources */,
 				19E154372ACF592500B9E855 /* PrinciplesOfAccountTextbooks.swift in Sources */,
-				19BB46F22ACBFCAC0036A1C1 /* Polytechnics.swift in Sources */,
 				19E1540F2ACF54BC00B9E855 /* ArtTextbooks.swift in Sources */,
 				19E154312ACF58D100B9E855 /* MusicTextbooks.swift in Sources */,
 				19E154212ACF57CC00B9E855 /* Governmenttextbooks.swift in Sources */,

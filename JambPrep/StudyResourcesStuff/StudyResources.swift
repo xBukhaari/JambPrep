@@ -51,7 +51,9 @@ struct StudyResources: View {
                                                     }.cornerRadius(10)
                                                 }
                                             }
-                                        } else if item == "Novel" {
+                                        }
+                            
+                            else if item == "Novel" {
                                 NavigationLink(destination: Novel()) {
                                     VStack {
                                         ZStack {
@@ -102,7 +104,7 @@ struct StudyResources: View {
                                 }
                             }
                             else if item == "Universities" {
-                                NavigationLink(destination: Syllabus()) {
+                                NavigationLink(destination: Universities()) {
                                     VStack {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 15)
