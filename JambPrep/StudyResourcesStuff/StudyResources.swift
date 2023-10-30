@@ -14,7 +14,7 @@ struct StudyResources: View {
         GridItem(.flexible(minimum: 150, maximum: 200), spacing: 10),
     ]
     
-    let itemImages = ["Textbooks", "Novel", "Syllabus", "Universities", "Polytechnics", "PostUTME", "DirectEntry", "ImportantDates", "Tips"]
+    let itemImages = ["Textbooks", "Novel", "Syllabus", "Universities", "ImportantDates", "Tips"]
     
     var body: some View {
         
@@ -54,7 +54,7 @@ struct StudyResources: View {
                                         }
                             
                             else if item == "Novel" {
-                                NavigationLink(destination: Novel()) {
+                                NavigationLink(destination: PDFDisplay()) {
                                     VStack {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 15)

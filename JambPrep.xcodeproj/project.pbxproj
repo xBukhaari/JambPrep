@@ -11,6 +11,7 @@
 		1912FD1B2ABB0E7C00471B79 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */; };
 		1912FD232ABB4D7600471B79 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD222ABB4D7600471B79 /* OnboardingView.swift */; };
 		195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */; };
+		196F65162AEFE89C005F412F /* PDFDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F65152AEFE89C005F412F /* PDFDisplay.swift */; };
 		1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0042AB908310021CC60 /* JambPrepApp.swift */; };
 		1998B0072AB908310021CC60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0062AB908310021CC60 /* ContentView.swift */; };
 		1998B0092AB908350021CC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998B0082AB908350021CC60 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		19BB46F02ACBFB270036A1C1 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46EF2ACBFB270036A1C1 /* Universities.swift */; };
 		19BB46F62ACBFF2C0036A1C1 /* ImportantDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */; };
 		19BB46FA2ACBFFB10036A1C1 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F92ACBFFB10036A1C1 /* Tips.swift */; };
+		19C4ECD32AF042FE00325F87 /* theLifeChanger.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19C4ECD22AF042FE00325F87 /* theLifeChanger.pdf */; };
 		19E1540B2ACEBF3B00B9E855 /* AgricTextbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1540A2ACEBF3B00B9E855 /* AgricTextbooks.swift */; };
 		19E1540D2ACF4F9400B9E855 /* ArabicTextbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1540C2ACF4F9400B9E855 /* ArabicTextbooks.swift */; };
 		19E1540F2ACF54BC00B9E855 /* ArtTextbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1540E2ACF54BC00B9E855 /* ArtTextbooks.swift */; };
@@ -55,6 +57,7 @@
 		1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		1912FD222ABB4D7600471B79 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
+		196F65152AEFE89C005F412F /* PDFDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDisplay.swift; sourceTree = "<group>"; };
 		1998B0012AB908310021CC60 /* JambPrep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JambPrep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1998B0042AB908310021CC60 /* JambPrepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JambPrepApp.swift; sourceTree = "<group>"; };
 		1998B0062AB908310021CC60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		19BB46EF2ACBFB270036A1C1 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantDates.swift; sourceTree = "<group>"; };
 		19BB46F92ACBFFB10036A1C1 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		19C4ECD22AF042FE00325F87 /* theLifeChanger.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = theLifeChanger.pdf; sourceTree = "<group>"; };
 		19E1540A2ACEBF3B00B9E855 /* AgricTextbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgricTextbooks.swift; sourceTree = "<group>"; };
 		19E1540C2ACF4F9400B9E855 /* ArabicTextbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArabicTextbooks.swift; sourceTree = "<group>"; };
 		19E1540E2ACF54BC00B9E855 /* ArtTextbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtTextbooks.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		197DD5732AEE78CF008644BD /* LifeChanger */ = {
+			isa = PBXGroup;
+			children = (
+				19C4ECD22AF042FE00325F87 /* theLifeChanger.pdf */,
+				196F65152AEFE89C005F412F /* PDFDisplay.swift */,
+			);
+			path = LifeChanger;
+			sourceTree = "<group>";
+		};
 		1998AFF82AB908310021CC60 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 			children = (
 				1998B0042AB908310021CC60 /* JambPrepApp.swift */,
 				1998B0062AB908310021CC60 /* ContentView.swift */,
+				197DD5732AEE78CF008644BD /* LifeChanger */,
 				19A39D012AC8EC6500F4B653 /* StudyResourcesStuff */,
 				195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */,
 				1912FD222ABB4D7600471B79 /* OnboardingView.swift */,
@@ -253,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1998B00C2AB908350021CC60 /* Preview Assets.xcassets in Resources */,
+				19C4ECD32AF042FE00325F87 /* theLifeChanger.pdf in Resources */,
 				1998B0092AB908350021CC60 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +314,7 @@
 				19E154172ACF56B800B9E855 /* ComputerStudiesTextbooks.swift in Sources */,
 				195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */,
 				19BB46EC2ACBF94B0036A1C1 /* Syllabus.swift in Sources */,
+				196F65162AEFE89C005F412F /* PDFDisplay.swift in Sources */,
 				19A39D062AC8F2CD00F4B653 /* TextbooksView.swift in Sources */,
 				19E154152ACF552500B9E855 /* CommerceTextbooks.swift in Sources */,
 				19E1540D2ACF4F9400B9E855 /* ArabicTextbooks.swift in Sources */,
