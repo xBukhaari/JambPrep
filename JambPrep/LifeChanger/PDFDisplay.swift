@@ -23,7 +23,7 @@ struct PDFDisplay: View {
                     .foregroundColor(.red)
             }
         }
-        .navigationBarTitle("PDF Viewer")
+        .navigationBarTitle("The Life Changer")
     }
 }
 
