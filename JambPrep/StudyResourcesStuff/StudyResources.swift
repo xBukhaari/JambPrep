@@ -155,7 +155,7 @@ struct StudyResources: View {
                                 }
                             }
                             else if item == "Tips" {
-                                NavigationLink(destination: Tips()) {
+                                NavigationLink(destination: VideoListView()) {
                                     VStack {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 15)

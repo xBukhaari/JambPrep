@@ -3,7 +3,6 @@
 //  JambPrep
 //
 //  Created by Bukhari Sani on 31/10/2023.
-//
 
 import SwiftUI
 
@@ -14,24 +13,26 @@ struct VideoListView: View {
         NavigationView {
             List(videos, id: \.id) { video in
                 HStack {
-                    Image(video.imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 80)
-                        .cornerRadius(4)
-                        .padding(.vertical, 4)
-                    
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(video.title)
-                            .fontWeight(.semibold)
-                            .lineLimit(2)
-                            .minimumScaleFactor(0.5)
+                    NavigationLink (destination: VideoDeatailView(video: video), label: {
+                        Image(video.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 80)
+                            .cornerRadius(4)
+                            .padding(.vertical, 4)
                         
-                        Text(video.uploadDate)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    }
-                    
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text(video.title)
+                                .fontWeight(.semibold)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.5)
+                            
+                            Text(video.uploadDate)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        
+                    })
                 }
                 .navigationTitle("The Best Tutorials")
             }

@@ -10,6 +10,7 @@
 		1905CB512AE3379B0055B593 /* ProfileSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905CB502AE3379B0055B593 /* ProfileSample.swift */; };
 		1912FD1B2ABB0E7C00471B79 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */; };
 		1912FD232ABB4D7600471B79 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD222ABB4D7600471B79 /* OnboardingView.swift */; };
+		194D251E2AF262190015C4A8 /* VideoDeatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D251D2AF262190015C4A8 /* VideoDeatailView.swift */; };
 		195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */; };
 		196F65162AEFE89C005F412F /* PDFDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F65152AEFE89C005F412F /* PDFDisplay.swift */; };
 		1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0042AB908310021CC60 /* JambPrepApp.swift */; };
@@ -58,6 +59,7 @@
 		1905CB502AE3379B0055B593 /* ProfileSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSample.swift; sourceTree = "<group>"; };
 		1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		1912FD222ABB4D7600471B79 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		194D251D2AF262190015C4A8 /* VideoDeatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDeatailView.swift; sourceTree = "<group>"; };
 		195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
 		196F65152AEFE89C005F412F /* PDFDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDisplay.swift; sourceTree = "<group>"; };
 		1998B0012AB908310021CC60 /* JambPrep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JambPrep.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 				19BB46F92ACBFFB10036A1C1 /* Tips.swift */,
 				19C4ECE12AF167F200325F87 /* Video.swift */,
 				19C4ECE32AF1845500325F87 /* VideoListView.swift */,
+				194D251D2AF262190015C4A8 /* VideoDeatailView.swift */,
 			);
 			path = VideosT;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1998B0072AB908310021CC60 /* ContentView.swift in Sources */,
 				19C4ECE42AF1845500325F87 /* VideoListView.swift in Sources */,
 				19E154112ACF550000B9E855 /* BiologyTextbooks.swift in Sources */,
+				194D251E2AF262190015C4A8 /* VideoDeatailView.swift in Sources */,
 				19E154352ACF590900B9E855 /* PhysicsTextbooks.swift in Sources */,
 				1905CB512AE3379B0055B593 /* ProfileSample.swift in Sources */,
 				19E1541B2ACF578A00B9E855 /* EconomicsTextbooks.swift in Sources */,
