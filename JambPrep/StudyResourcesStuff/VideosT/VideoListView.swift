@@ -35,6 +35,7 @@ struct VideoListView: View {
                     })
                 }
                 .navigationTitle("The Best Tutorials")
+                
             }
             .frame(width: 412)
             .background(Color.green.opacity(0.25))

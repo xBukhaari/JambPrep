@@ -13,6 +13,7 @@
 		194D251E2AF262190015C4A8 /* VideoDeatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D251D2AF262190015C4A8 /* VideoDeatailView.swift */; };
 		195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */; };
 		196F65162AEFE89C005F412F /* PDFDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F65152AEFE89C005F412F /* PDFDisplay.swift */; };
+		1970EF842AF2F461005B7F58 /* theSyllabus.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1970EF832AF2F461005B7F58 /* theSyllabus.pdf */; };
 		1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0042AB908310021CC60 /* JambPrepApp.swift */; };
 		1998B0072AB908310021CC60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998B0062AB908310021CC60 /* ContentView.swift */; };
 		1998B0092AB908350021CC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998B0082AB908350021CC60 /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		19A39D042AC8EDE700F4B653 /* StudyResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39D032AC8EDE700F4B653 /* StudyResources.swift */; };
 		19A39D062AC8F2CD00F4B653 /* TextbooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */; };
 		19A39D082AC8F73700F4B653 /* textbookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A39D072AC8F73700F4B653 /* textbookList.swift */; };
-		19BB46EA2ACBF8FE0036A1C1 /* Novel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46E92ACBF8FE0036A1C1 /* Novel.swift */; };
 		19BB46EC2ACBF94B0036A1C1 /* Syllabus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */; };
 		19BB46F02ACBFB270036A1C1 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46EF2ACBFB270036A1C1 /* Universities.swift */; };
 		19BB46F62ACBFF2C0036A1C1 /* ImportantDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */; };
@@ -62,6 +62,7 @@
 		194D251D2AF262190015C4A8 /* VideoDeatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDeatailView.swift; sourceTree = "<group>"; };
 		195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
 		196F65152AEFE89C005F412F /* PDFDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDisplay.swift; sourceTree = "<group>"; };
+		1970EF832AF2F461005B7F58 /* theSyllabus.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = theSyllabus.pdf; sourceTree = "<group>"; };
 		1998B0012AB908310021CC60 /* JambPrep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JambPrep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1998B0042AB908310021CC60 /* JambPrepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JambPrepApp.swift; sourceTree = "<group>"; };
 		1998B0062AB908310021CC60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		19A39D032AC8EDE700F4B653 /* StudyResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyResources.swift; sourceTree = "<group>"; };
 		19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbooksView.swift; sourceTree = "<group>"; };
 		19A39D072AC8F73700F4B653 /* textbookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textbookList.swift; sourceTree = "<group>"; };
-		19BB46E92ACBF8FE0036A1C1 /* Novel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel.swift; sourceTree = "<group>"; };
 		19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllabus.swift; sourceTree = "<group>"; };
 		19BB46EF2ACBFB270036A1C1 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantDates.swift; sourceTree = "<group>"; };
@@ -116,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1970EF822AF2F12A005B7F58 /* Syllabus */ = {
+			isa = PBXGroup;
+			children = (
+				1970EF832AF2F461005B7F58 /* theSyllabus.pdf */,
+				19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */,
+			);
+			path = Syllabus;
+			sourceTree = "<group>";
+		};
 		197DD5732AEE78CF008644BD /* LifeChanger */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,14 +177,11 @@
 		19A39D012AC8EC6500F4B653 /* StudyResourcesStuff */ = {
 			isa = PBXGroup;
 			children = (
+				19A39D032AC8EDE700F4B653 /* StudyResources.swift */,
+				1970EF822AF2F12A005B7F58 /* Syllabus */,
 				19C4ECDA2AF166F600325F87 /* VideosT */,
 				197DD5732AEE78CF008644BD /* LifeChanger */,
 				19E154072ACEA6DD00B9E855 /* SubjectsTextbooks */,
-				19A39D032AC8EDE700F4B653 /* StudyResources.swift */,
-				19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */,
-				19A39D072AC8F73700F4B653 /* textbookList.swift */,
-				19BB46E92ACBF8FE0036A1C1 /* Novel.swift */,
-				19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */,
 				19BB46EF2ACBFB270036A1C1 /* Universities.swift */,
 				19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */,
 			);
@@ -196,6 +202,8 @@
 		19E154072ACEA6DD00B9E855 /* SubjectsTextbooks */ = {
 			isa = PBXGroup;
 			children = (
+				19A39D072AC8F73700F4B653 /* textbookList.swift */,
+				19A39D052AC8F2CD00F4B653 /* TextbooksView.swift */,
 				19E1540A2ACEBF3B00B9E855 /* AgricTextbooks.swift */,
 				19E1540C2ACF4F9400B9E855 /* ArabicTextbooks.swift */,
 				19E1540E2ACF54BC00B9E855 /* ArtTextbooks.swift */,
@@ -286,6 +294,7 @@
 				1998B00C2AB908350021CC60 /* Preview Assets.xcassets in Resources */,
 				19C4ECD32AF042FE00325F87 /* theLifeChanger.pdf in Resources */,
 				1998B0092AB908350021CC60 /* Assets.xcassets in Resources */,
+				1970EF842AF2F461005B7F58 /* theSyllabus.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +330,6 @@
 				19E154132ACF551100B9E855 /* ChemistryTextbooks.swift in Sources */,
 				19A39D042AC8EDE700F4B653 /* StudyResources.swift in Sources */,
 				19E1543B2ACF595400B9E855 /* YorubaTextbooks.swift in Sources */,
-				19BB46EA2ACBF8FE0036A1C1 /* Novel.swift in Sources */,
 				19E154292ACF587200B9E855 /* IgboTextbooks.swift in Sources */,
 				1998B0052AB908310021CC60 /* JambPrepApp.swift in Sources */,
 				19BB46F62ACBFF2C0036A1C1 /* ImportantDates.swift in Sources */,
