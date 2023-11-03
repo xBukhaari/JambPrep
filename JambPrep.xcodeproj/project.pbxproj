@@ -24,7 +24,6 @@
 		19BB46EC2ACBF94B0036A1C1 /* Syllabus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */; };
 		19BB46F02ACBFB270036A1C1 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46EF2ACBFB270036A1C1 /* Universities.swift */; };
 		19BB46F62ACBFF2C0036A1C1 /* ImportantDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */; };
-		19BB46FA2ACBFFB10036A1C1 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB46F92ACBFFB10036A1C1 /* Tips.swift */; };
 		19C4ECD32AF042FE00325F87 /* theLifeChanger.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19C4ECD22AF042FE00325F87 /* theLifeChanger.pdf */; };
 		19C4ECE22AF167F200325F87 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4ECE12AF167F200325F87 /* Video.swift */; };
 		19C4ECE42AF1845500325F87 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4ECE32AF1845500325F87 /* VideoListView.swift */; };
@@ -74,7 +73,6 @@
 		19BB46EB2ACBF94B0036A1C1 /* Syllabus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllabus.swift; sourceTree = "<group>"; };
 		19BB46EF2ACBFB270036A1C1 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		19BB46F52ACBFF2C0036A1C1 /* ImportantDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantDates.swift; sourceTree = "<group>"; };
-		19BB46F92ACBFFB10036A1C1 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		19C4ECD22AF042FE00325F87 /* theLifeChanger.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = theLifeChanger.pdf; sourceTree = "<group>"; };
 		19C4ECE12AF167F200325F87 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		19C4ECE32AF1845500325F87 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 		19C4ECDA2AF166F600325F87 /* VideosT */ = {
 			isa = PBXGroup;
 			children = (
-				19BB46F92ACBFFB10036A1C1 /* Tips.swift */,
 				19C4ECE12AF167F200325F87 /* Video.swift */,
 				19C4ECE32AF1845500325F87 /* VideoListView.swift */,
 				194D251D2AF262190015C4A8 /* VideoDeatailView.swift */,
@@ -323,7 +320,6 @@
 				19E1540B2ACEBF3B00B9E855 /* AgricTextbooks.swift in Sources */,
 				19BB46F02ACBFB270036A1C1 /* Universities.swift in Sources */,
 				19E154272ACF585E00B9E855 /* HomeEconsTextbooks.swift in Sources */,
-				19BB46FA2ACBFFB10036A1C1 /* Tips.swift in Sources */,
 				19E1541D2ACF579900B9E855 /* FrenchTextbooks.swift in Sources */,
 				19E154192ACF56D900B9E855 /* CRKTextbooks.swift in Sources */,
 				19C4ECE22AF167F200325F87 /* Video.swift in Sources */,

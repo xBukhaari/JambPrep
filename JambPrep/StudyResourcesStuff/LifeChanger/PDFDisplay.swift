@@ -29,7 +29,7 @@ struct PDFDisplay: View {
 
 struct PDFKitView: UIViewRepresentable {
     let document: PDFDocument
-
+    
     func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
         pdfView.document = document
@@ -37,7 +37,7 @@ struct PDFKitView: UIViewRepresentable {
         pdfView.autoScales = true
         return pdfView
     }
-
+    
     func updateUIView(_ uiView: PDFView, context: Context) {
     }
 }

@@ -32,6 +32,7 @@ struct TextbooksView: View {
                     }
                 }
                 .navigationBarTitle(Text("TEXTBOOKS"))
+                .frame(width: 412)
             }
         }
         
