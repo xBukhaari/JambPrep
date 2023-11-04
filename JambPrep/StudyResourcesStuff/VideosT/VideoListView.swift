@@ -10,7 +10,7 @@ struct VideoListView: View {
     var videos: [Video] = VideoList.theTutorials
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(videos, id: \.id) { video in
                 HStack {
                     NavigationLink (destination: VideoDeatailView(video: video), label: {
