@@ -17,7 +17,6 @@ struct Universities: View {
     ]
     
     var body: some View {
-        NavigationStack{
             ZStack {
                 List {
                     Section(header:
@@ -51,7 +50,6 @@ struct Universities: View {
             }
         }
     }
-}
 
 struct Universities_Previews: PreviewProvider {
     static var previews: some View {

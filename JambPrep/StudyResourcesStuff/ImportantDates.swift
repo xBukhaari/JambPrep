@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ImportantDates: View {
     var body: some View {
-        NavigationStack {
             Form {
                 Section(header: Text("JAMB 2023/2024 INFO")
                     .font(.title)
@@ -30,7 +29,6 @@ struct ImportantDates: View {
             }
         }
     }
-}
 
 struct ImportantDates_Previews: PreviewProvider {
     static var previews: some View {
