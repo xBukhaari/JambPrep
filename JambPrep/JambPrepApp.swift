@@ -24,7 +24,7 @@ struct JambPrepApp: App {
                         features: [
                          Feature(
                          title: "Access To Past Questions",
-                         description: "Over 100,000 past questions are available for you to practice.",
+                         description: "Over 40,000 past questions are available for you to practice.",
                          icon: "questionmark.folder.fill"),
                          
                          Feature(

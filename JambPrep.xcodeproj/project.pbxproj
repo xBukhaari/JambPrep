@@ -11,6 +11,7 @@
 		1912FD1B2ABB0E7C00471B79 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */; };
 		1912FD232ABB4D7600471B79 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912FD222ABB4D7600471B79 /* OnboardingView.swift */; };
 		194093C42AF7A0C500BF3DDB /* ExamsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194093C32AF7A0C500BF3DDB /* ExamsMaker.swift */; };
+		194093C62AF7E84200BF3DDB /* SelectedSubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194093C52AF7E84200BF3DDB /* SelectedSubjectsView.swift */; };
 		194D251E2AF262190015C4A8 /* VideoDeatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D251D2AF262190015C4A8 /* VideoDeatailView.swift */; };
 		195C36422ABCFEFA00C12838 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */; };
 		196F65162AEFE89C005F412F /* PDFDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F65152AEFE89C005F412F /* PDFDisplay.swift */; };
@@ -60,6 +61,7 @@
 		1912FD1A2ABB0E7C00471B79 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		1912FD222ABB4D7600471B79 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		194093C32AF7A0C500BF3DDB /* ExamsMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsMaker.swift; sourceTree = "<group>"; };
+		194093C52AF7E84200BF3DDB /* SelectedSubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedSubjectsView.swift; sourceTree = "<group>"; };
 		194D251D2AF262190015C4A8 /* VideoDeatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDeatailView.swift; sourceTree = "<group>"; };
 		195C36412ABCFEFA00C12838 /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
 		196F65152AEFE89C005F412F /* PDFDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDisplay.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		194093C22AF7A0AB00BF3DDB /* Exams */ = {
 			isa = PBXGroup;
 			children = (
+				194093C52AF7E84200BF3DDB /* SelectedSubjectsView.swift */,
 				194093C32AF7A0C500BF3DDB /* ExamsMaker.swift */,
 			);
 			path = Exams;
@@ -344,6 +347,7 @@
 				19E154372ACF592500B9E855 /* PrinciplesOfAccountTextbooks.swift in Sources */,
 				19E1540F2ACF54BC00B9E855 /* ArtTextbooks.swift in Sources */,
 				19E154312ACF58D100B9E855 /* MusicTextbooks.swift in Sources */,
+				194093C62AF7E84200BF3DDB /* SelectedSubjectsView.swift in Sources */,
 				194093C42AF7A0C500BF3DDB /* ExamsMaker.swift in Sources */,
 				19E154212ACF57CC00B9E855 /* Governmenttextbooks.swift in Sources */,
 				1912FD232ABB4D7600471B79 /* OnboardingView.swift in Sources */,

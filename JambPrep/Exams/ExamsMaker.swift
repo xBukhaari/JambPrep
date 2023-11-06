@@ -7,57 +7,63 @@
 import SwiftUI
 
 // Define the available subjects
-let availableSubjects = ["Agricultural Science", "Arabic", "Art", "Biology", "Chemistry", "Commerce", "Computer Studies", "Christian Religious Studies", "Economics", "French", "Geography", "Government", "Hausa", "History", "Home Economics", "Igbo", "Islamic Studies", "Literature in English", "Mathematics", "Music", "Physical & Health Education (PHE)", "Physics", "Principles of Accounts", "Use of English", "Yoruba"]
+let availableSubjects = ["Agricultural Science", "Arabic", "Biology", "Chemistry", "Commerce", "Computer Studies", "Christian Religious Studies", "Economics", "Fine Art", "French", "Geography", "Government", "Hausa", "History", "Igbo", "Islamic Studies", "Literature in English", "Mathematics", "Music", "Physical & Health Education (PHE)", "Physics", "Principles of Accounts", "Use of English", "Yoruba"]
 
 struct YearSelectionView: View {
     var body: some View {
         NavigationView {
-            List(1990...2023, id: \.self) { year in
+            List(1983...2023, id: \.self) { year in
                 NavigationLink(destination: SubjectSelectionView(year: year)) {
                     Text("\(String(year))")
                 }
             }
-            .navigationBarTitle("Select a Year")
+            .navigationBarTitle("Select a JAMB Year")
         }
     }
 }
 
-
 struct SubjectSelectionView: View {
     let year: Int
     @State private var selectedSubjects: Set<String> = []
+    @State private var isNextButtonPressed = false
 
     var body: some View {
-        VStack {
-            Text("Select up to 4 subjects to practice from \(year)")
-
-            List(availableSubjects, id: \.self) { subject in
-                Button(action: {
-                    toggleSelection(subject)
-                }) {
-                    HStack {
-                        Text(subject)
-                        if selectedSubjects.contains(subject) {
-                            Spacer()
-                            Image(systemName: "checkmark")
-                                .foregroundColor(.green)
+            NavigationLink(destination: SelectedSubjectsView(selectedSubjects: Array(selectedSubjects), year: year), isActive: $isNextButtonPressed) {
+                EmptyView()
+            }
+            .hidden()
+            
+            VStack {
+                Text("Make a combination of four subjects from \(String(year))")
+                
+                List(availableSubjects, id: \.self) { subject in
+                    Button(action: {
+                        toggleSelection(subject)
+                    }) {
+                        HStack {
+                            Text(subject)
+                            if selectedSubjects.contains(subject) {
+                                Spacer()
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundColor(.green)
+                            }
                         }
                     }
                 }
+                .listStyle(GroupedListStyle())
             }
-            .listStyle(GroupedListStyle())
+            .navigationBarTitle("Select Subjects")
+            
+            .navigationBarItems(
+                trailing: Button("Next") {
+                 
+                    if selectedSubjects.count == 4 {
+                        isNextButtonPressed = true
+                    }
+                }
+                    .disabled(selectedSubjects.count < 4 || selectedSubjects.count > 4)
+            )
         }
-        .navigationBarTitle("Select Subjects")
-        .navigationBarItems(
-            leading: Button("Cancel") {
-                // Handle cancel action
-            },
-            trailing: Button("Next") {
-                // Handle next action
-            }
-            .disabled(selectedSubjects.count < 1 || selectedSubjects.count > 4)
-        )
-    }
 
     func toggleSelection(_ subject: String) {
         if selectedSubjects.contains(subject) {
